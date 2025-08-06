@@ -1,4 +1,4 @@
-# Basic_Reusable_Ontology (BRO)
+# Basic Reusable Ontology (BRO)
 A collection of ontologies with properties from SKOS and Dublin Core and Entities from Prov. One thing I've often wondered is why are so many upper models created based on philosophical or psychological theories such as BFO and DOLCE. It seems to me a much better approach would be based on best practices. With that in mind I'm creating the Basic Reusable Ontology (BRO). A collection of ontologies based on my experience building ontologies that solve real problems. There will be three versions:
 1) Basic BRO. These are properties from Dublin Core and SKOS that I include in every ontology because they are almost always used. All the properties in this ontology have no range datatype so that they can be either literals or IRIs. They are annotation properties because they are metadata and most of them can apply to classes and properties as well as individuals. As of now (11/22/2024) this is the only one uploaded.
 2) Basic PRO. Everything in Basic BRO plus some entities from the Prov ontology that I include in almost all my ontologies.
