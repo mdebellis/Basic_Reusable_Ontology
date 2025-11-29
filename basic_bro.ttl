@@ -24,76 +24,14 @@
 <http://purl.org/dc/dcam/rangeIncludes> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/elements/1.1/contributor
-<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/coverage
-<http://purl.org/dc/elements/1.1/coverage> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/creator
-<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/date
-<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/format
-<http://purl.org/dc/elements/1.1/format> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/identifier
-<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/language
-<http://purl.org/dc/elements/1.1/language> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/publisher
-<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/relation
-<http://purl.org/dc/elements/1.1/relation> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/rights
-<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/source
-<http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/subject
-<http://purl.org/dc/elements/1.1/subject> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/type
-<http://purl.org/dc/elements/1.1/type> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/description> ,
-                                                       <http://purl.org/dc/terms/description> .
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/description> .
 
 
 ###  http://purl.org/dc/terms/accessRights
 <http://purl.org/dc/terms/accessRights> rdf:type owl:AnnotationProperty ;
-                                        rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/rights> ,
-                                                           <http://purl.org/dc/terms/rights> .
+                                        rdfs:subPropertyOf <http://purl.org/dc/terms/rights> .
 
 
 ###  http://purl.org/dc/terms/accrualMethod
@@ -113,7 +51,6 @@
 
 ###  http://purl.org/dc/terms/alternative
 <http://purl.org/dc/terms/alternative> rdf:type owl:AnnotationProperty ;
-                                       rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/title> ;
                                        rdfs:range rdfs:Literal .
 
 
@@ -123,71 +60,59 @@
 
 ###  http://purl.org/dc/terms/available
 <http://purl.org/dc/terms/available> rdf:type owl:AnnotationProperty ;
-                                     rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                                      rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/bibliographicCitation
 <http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty ;
-                                                 rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
                                                  rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/conformsTo
 <http://purl.org/dc/terms/conformsTo> rdf:type owl:AnnotationProperty ;
-                                      rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
-                                                         <http://purl.org/dc/terms/relation> .
+                                      rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
 
 
 ###  http://purl.org/dc/terms/contributor
-<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty ;
-                                       rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/contributor> .
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/coverage
-<http://purl.org/dc/terms/coverage> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/coverage> .
+<http://purl.org/dc/terms/coverage> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty ;
-                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                                    rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty ;
-                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/creator> ,
-                                                      <http://purl.org/dc/terms/contributor> .
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/contributor> .
 
 
 ###  http://purl.org/dc/terms/date
 <http://purl.org/dc/terms/date> rdf:type owl:AnnotationProperty ;
-                                rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                                 rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/dateAccepted
 <http://purl.org/dc/terms/dateAccepted> rdf:type owl:AnnotationProperty ;
-                                        rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                                         rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/dateCopyrighted
 <http://purl.org/dc/terms/dateCopyrighted> rdf:type owl:AnnotationProperty ;
-                                           rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                                            rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/dateSubmitted
 <http://purl.org/dc/terms/dateSubmitted> rdf:type owl:AnnotationProperty ;
-                                         rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                                          rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/description
-<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty ;
-                                       rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/description> .
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/educationLevel
@@ -197,90 +122,75 @@
 
 ###  http://purl.org/dc/terms/extent
 <http://purl.org/dc/terms/extent> rdf:type owl:AnnotationProperty ;
-                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/format> ,
-                                                     <http://purl.org/dc/terms/format> .
+                                  rdfs:subPropertyOf <http://purl.org/dc/terms/format> .
 
 
 ###  http://purl.org/dc/terms/format
-<http://purl.org/dc/terms/format> rdf:type owl:AnnotationProperty ;
-                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/format> .
+<http://purl.org/dc/terms/format> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/hasFormat
 <http://purl.org/dc/terms/hasFormat> rdf:type owl:AnnotationProperty ;
-                                     rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
-                                                        <http://purl.org/dc/terms/relation> .
+                                     rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
 
 
 ###  http://purl.org/dc/terms/hasPart
 <http://purl.org/dc/terms/hasPart> rdf:type owl:AnnotationProperty ;
-                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
-                                                      <http://purl.org/dc/terms/relation> .
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
 
 
 ###  http://purl.org/dc/terms/hasVersion
 <http://purl.org/dc/terms/hasVersion> rdf:type owl:AnnotationProperty ;
-                                      rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
-                                                         <http://purl.org/dc/terms/relation> .
+                                      rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
 
 
 ###  http://purl.org/dc/terms/identifier
 <http://purl.org/dc/terms/identifier> rdf:type owl:AnnotationProperty ;
-                                      rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> ;
                                       rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/isFormatOf
 <http://purl.org/dc/terms/isFormatOf> rdf:type owl:AnnotationProperty ;
-                                      rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
-                                                         <http://purl.org/dc/terms/relation> .
+                                      rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
 
 
 ###  http://purl.org/dc/terms/isPartOf
 <http://purl.org/dc/terms/isPartOf> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
-                                                       <http://purl.org/dc/terms/relation> .
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
 
 
 ###  http://purl.org/dc/terms/isReferencedBy
 <http://purl.org/dc/terms/isReferencedBy> rdf:type owl:AnnotationProperty ;
-                                          rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
-                                                             <http://purl.org/dc/terms/relation> .
+                                          rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
 
 
 ###  http://purl.org/dc/terms/isReplacedBy
 <http://purl.org/dc/terms/isReplacedBy> rdf:type owl:AnnotationProperty ;
-                                        rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
-                                                           <http://purl.org/dc/terms/relation> .
+                                        rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
 
 
 ###  http://purl.org/dc/terms/isRequiredBy
 <http://purl.org/dc/terms/isRequiredBy> rdf:type owl:AnnotationProperty ;
-                                        rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
-                                                           <http://purl.org/dc/terms/relation> .
+                                        rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
 
 
 ###  http://purl.org/dc/terms/isVersionOf
 <http://purl.org/dc/terms/isVersionOf> rdf:type owl:AnnotationProperty ;
-                                       rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
-                                                          <http://purl.org/dc/terms/relation> .
+                                       rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
 
 
 ###  http://purl.org/dc/terms/issued
 <http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty ;
-                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                                   rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/language
-<http://purl.org/dc/terms/language> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/language> .
+<http://purl.org/dc/terms/language> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty ;
-                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/rights> ,
-                                                      <http://purl.org/dc/terms/rights> .
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/rights> .
 
 
 ###  http://purl.org/dc/terms/mediator
@@ -290,92 +200,76 @@
 
 ###  http://purl.org/dc/terms/medium
 <http://purl.org/dc/terms/medium> rdf:type owl:AnnotationProperty ;
-                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/format> ,
-                                                     <http://purl.org/dc/terms/format> .
+                                  rdfs:subPropertyOf <http://purl.org/dc/terms/format> .
 
 
 ###  http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                                     rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/publisher
-<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty ;
-                                     rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/publisher> .
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/references
 <http://purl.org/dc/terms/references> rdf:type owl:AnnotationProperty ;
-                                      rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
-                                                         <http://purl.org/dc/terms/relation> .
+                                      rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
 
 
 ###  http://purl.org/dc/terms/relation
-<http://purl.org/dc/terms/relation> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> .
+<http://purl.org/dc/terms/relation> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/replaces
 <http://purl.org/dc/terms/replaces> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
-                                                       <http://purl.org/dc/terms/relation> .
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
 
 
 ###  http://purl.org/dc/terms/requires
 <http://purl.org/dc/terms/requires> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
-                                                       <http://purl.org/dc/terms/relation> .
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
 
 
 ###  http://purl.org/dc/terms/rights
-<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty ;
-                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/rights> .
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/source
 <http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty ;
-                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/source> ,
-                                                     <http://purl.org/dc/terms/relation> .
+                                  rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
 
 
 ###  http://purl.org/dc/terms/spatial
 <http://purl.org/dc/terms/spatial> rdf:type owl:AnnotationProperty ;
-                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/coverage> ,
-                                                      <http://purl.org/dc/terms/coverage> .
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/coverage> .
 
 
 ###  http://purl.org/dc/terms/subject
-<http://purl.org/dc/terms/subject> rdf:type owl:AnnotationProperty ;
-                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/subject> .
+<http://purl.org/dc/terms/subject> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/tableOfContents
 <http://purl.org/dc/terms/tableOfContents> rdf:type owl:AnnotationProperty ;
-                                           rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/description> ,
-                                                              <http://purl.org/dc/terms/description> .
+                                           rdfs:subPropertyOf <http://purl.org/dc/terms/description> .
 
 
 ###  http://purl.org/dc/terms/temporal
 <http://purl.org/dc/terms/temporal> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/coverage> ,
-                                                       <http://purl.org/dc/terms/coverage> .
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/coverage> .
 
 
 ###  http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty ;
-                                 rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/title> ;
                                  rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/type
-<http://purl.org/dc/terms/type> rdf:type owl:AnnotationProperty ;
-                                rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/type> .
+<http://purl.org/dc/terms/type> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/valid
 <http://purl.org/dc/terms/valid> rdf:type owl:AnnotationProperty ;
-                                 rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> ;
                                  rdfs:range rdfs:Literal .
 
 
@@ -522,80 +416,6 @@
 
 ###  http://www.w3.org/2001/XMLSchema#date
 xsd:date rdf:type rdfs:Datatype .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://purl.org/dc/terms/alternative
-<http://purl.org/dc/terms/alternative> rdf:type owl:DatatypeProperty ;
-                                       rdfs:subPropertyOf <http://purl.org/dc/terms/title> .
-
-
-###  http://purl.org/dc/terms/available
-<http://purl.org/dc/terms/available> rdf:type owl:DatatypeProperty ;
-                                     rdfs:subPropertyOf <http://purl.org/dc/terms/date> .
-
-
-###  http://purl.org/dc/terms/bibliographicCitation
-<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:DatatypeProperty ;
-                                                 rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> .
-
-
-###  http://purl.org/dc/terms/created
-<http://purl.org/dc/terms/created> rdf:type owl:DatatypeProperty ;
-                                   rdfs:subPropertyOf <http://purl.org/dc/terms/date> .
-
-
-###  http://purl.org/dc/terms/date
-<http://purl.org/dc/terms/date> rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/dc/terms/dateAccepted
-<http://purl.org/dc/terms/dateAccepted> rdf:type owl:DatatypeProperty ;
-                                        rdfs:subPropertyOf <http://purl.org/dc/terms/date> .
-
-
-###  http://purl.org/dc/terms/dateCopyrighted
-<http://purl.org/dc/terms/dateCopyrighted> rdf:type owl:DatatypeProperty ;
-                                           rdfs:subPropertyOf <http://purl.org/dc/terms/date> .
-
-
-###  http://purl.org/dc/terms/dateSubmitted
-<http://purl.org/dc/terms/dateSubmitted> rdf:type owl:DatatypeProperty ;
-                                         rdfs:subPropertyOf <http://purl.org/dc/terms/date> .
-
-
-###  http://purl.org/dc/terms/identifier
-<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/dc/terms/issued
-<http://purl.org/dc/terms/issued> rdf:type owl:DatatypeProperty ;
-                                  rdfs:subPropertyOf <http://purl.org/dc/terms/date> .
-
-
-###  http://purl.org/dc/terms/modified
-<http://purl.org/dc/terms/modified> rdf:type owl:DatatypeProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/terms/date> .
-
-
-###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/dc/terms/valid
-<http://purl.org/dc/terms/valid> rdf:type owl:DatatypeProperty ;
-                                 rdfs:subPropertyOf <http://purl.org/dc/terms/date> .
-
-
-###  http://www.w3.org/2004/02/skos/core#notation
-<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:DatatypeProperty ;
-                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                               rdfs:label "notation"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en ;
-                                               <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:notation is used with a typed literal in the object position of the triple."@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
