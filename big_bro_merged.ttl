@@ -13,7 +13,6 @@
                                            <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ;
                                            <http://purl.org/dc/terms/title> "Basic Reusable Ontology 0 (Bacic_Bro)"@en ;
                                            rdfs:comment "Subset of the W3C PROV-O ontology containing only the terms needed by the Basic Reusable Ontology (Big Bro). IRIs of PROV terms are preserved; content not required by Big Bro has been omitted."@en ;
-                                           rdfs:label "PROV-Lite subset for Big Bro"@en ;
                                            rdfs:seeAlso <http://www.w3.org/TR/prov-o/> ,
                                                         <http://www.w3.org/ns/prov> ;
                                            owl:versionInfo "Recommendation version 2013-04-30, subsetted as PROV-Lite for Big Bro"@en ,
@@ -951,7 +950,8 @@ owl:Thing rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/prov#Association
-<http://www.w3.org/ns/prov#Association> rdf:type owl:Class .
+<http://www.w3.org/ns/prov#Association> rdf:type owl:Class ;
+                                        rdfs:label "Association" .
 
 
 ###  http://www.w3.org/ns/prov#Entity
