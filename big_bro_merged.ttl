@@ -1,0 +1,1076 @@
+@prefix : <https://www.michaeldebellis.com/big_bro/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://www.michaeldebellis.com/big_bro/> .
+
+<https://www.michaeldebellis.com/big_bro> rdf:type owl:Ontology ;
+                                           <http://purl.org/dc/terms/contributor> "Michael DeBellis Orcid ID: 0000-0002-8824-9577"@en ;
+                                           <http://purl.org/dc/terms/created> "2025-28-11" ;
+                                           <http://purl.org/dc/terms/description> "Basic_Bro  provides core metadata annotation properties by reusing SKOS and DCTERMS. It is the foundational module used by all BRO layers and includes only annotation and datatype properties, with no classes or object properties."@en ;
+                                           <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ;
+                                           <http://purl.org/dc/terms/title> "Basic Reusable Ontology 0 (Bacic_Bro)"@en ;
+                                           rdfs:comment "Subset of the W3C PROV-O ontology containing only the terms needed by the Basic Reusable Ontology (Big Bro). IRIs of PROV terms are preserved; content not required by Big Bro has been omitted."@en ;
+                                           rdfs:label "PROV-Lite subset for Big Bro"@en ;
+                                           rdfs:seeAlso <http://www.w3.org/TR/prov-o/> ,
+                                                        <http://www.w3.org/ns/prov> ;
+                                           owl:versionInfo "Recommendation version 2013-04-30, subsetted as PROV-Lite for Big Bro"@en ,
+                                                           "1.0.0" ;
+                                           <http://www.w3.org/2004/02/skos/core#changeNote> """2025-11-29 (M. DeBellis): Created PROV-Lite as a cleaned subset of the W3C PROV-O Turtle serialization for use with the Basic Reusable Ontology (Big Bro).
+– Removed duplicate owl:Ontology declarations.
+– Moved orphaned ontology metadata triples (label, seeAlso, versionIRI, versionInfo, specializationOf, wasRevisionOf) under this ontology IRI.
+– Removed stray non-comment prose that appeared after the :wasStartedBy axiom and caused Turtle parse errors.
+– Trimmed PROV terms and axioms not required by Big Bro, without changing the IRIs or logical meaning of the retained PROV terms."""@en ;
+                                           <http://www.w3.org/2004/02/skos/core#editorialNote> "Basic_Bro includes the legacy Dublin Core (dc:) namespace only because it is automatically imported by DCTERMS for backward compatibility. BRO users should always use dcterms:* properties and never use dc:* properties."@en ;
+                                           <http://www.w3.org/2004/02/skos/core#note> "Basic_Bro reuses annotation and datatype properties from the SKOS and DCTERMS vocabularies. All classes and object properties from imported vocabularies have been removed to provide a clean metadata-only reusable layer."@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/dcam/rangeIncludes
+<http://purl.org/dc/dcam/rangeIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/description> .
+
+
+###  http://purl.org/dc/terms/accessRights
+<http://purl.org/dc/terms/accessRights> rdf:type owl:AnnotationProperty ;
+                                        rdfs:subPropertyOf <http://purl.org/dc/terms/rights> .
+
+
+###  http://purl.org/dc/terms/accrualMethod
+<http://purl.org/dc/terms/accrualMethod> rdf:type owl:AnnotationProperty ;
+                                         rdfs:domain <http://purl.org/dc/dcmitype/Collection> .
+
+
+###  http://purl.org/dc/terms/accrualPeriodicity
+<http://purl.org/dc/terms/accrualPeriodicity> rdf:type owl:AnnotationProperty ;
+                                              rdfs:domain <http://purl.org/dc/dcmitype/Collection> .
+
+
+###  http://purl.org/dc/terms/accrualPolicy
+<http://purl.org/dc/terms/accrualPolicy> rdf:type owl:AnnotationProperty ;
+                                         rdfs:domain <http://purl.org/dc/dcmitype/Collection> .
+
+
+###  http://purl.org/dc/terms/alternative
+<http://purl.org/dc/terms/alternative> rdf:type owl:AnnotationProperty ;
+                                       rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/audience
+<http://purl.org/dc/terms/audience> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/available
+<http://purl.org/dc/terms/available> rdf:type owl:AnnotationProperty ;
+                                     rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/conformsTo
+<http://purl.org/dc/terms/conformsTo> rdf:type owl:AnnotationProperty ;
+                                      rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/coverage
+<http://purl.org/dc/terms/coverage> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty ;
+                                   rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/contributor> .
+
+
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type owl:AnnotationProperty ;
+                                rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/dateAccepted
+<http://purl.org/dc/terms/dateAccepted> rdf:type owl:AnnotationProperty ;
+                                        rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/dateCopyrighted
+<http://purl.org/dc/terms/dateCopyrighted> rdf:type owl:AnnotationProperty ;
+                                           rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/dateSubmitted
+<http://purl.org/dc/terms/dateSubmitted> rdf:type owl:AnnotationProperty ;
+                                         rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/educationLevel
+<http://purl.org/dc/terms/educationLevel> rdf:type owl:AnnotationProperty ;
+                                          rdfs:subPropertyOf <http://purl.org/dc/terms/audience> .
+
+
+###  http://purl.org/dc/terms/extent
+<http://purl.org/dc/terms/extent> rdf:type owl:AnnotationProperty ;
+                                  rdfs:subPropertyOf <http://purl.org/dc/terms/format> .
+
+
+###  http://purl.org/dc/terms/format
+<http://purl.org/dc/terms/format> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasFormat
+<http://purl.org/dc/terms/hasFormat> rdf:type owl:AnnotationProperty ;
+                                     rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/hasPart
+<http://purl.org/dc/terms/hasPart> rdf:type owl:AnnotationProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> rdf:type owl:AnnotationProperty ;
+                                      rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:AnnotationProperty ;
+                                      rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/isFormatOf
+<http://purl.org/dc/terms/isFormatOf> rdf:type owl:AnnotationProperty ;
+                                      rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/isPartOf
+<http://purl.org/dc/terms/isPartOf> rdf:type owl:AnnotationProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/isReferencedBy
+<http://purl.org/dc/terms/isReferencedBy> rdf:type owl:AnnotationProperty ;
+                                          rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/isReplacedBy
+<http://purl.org/dc/terms/isReplacedBy> rdf:type owl:AnnotationProperty ;
+                                        rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/isRequiredBy
+<http://purl.org/dc/terms/isRequiredBy> rdf:type owl:AnnotationProperty ;
+                                        rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/isVersionOf
+<http://purl.org/dc/terms/isVersionOf> rdf:type owl:AnnotationProperty ;
+                                       rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty ;
+                                  rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/rights> .
+
+
+###  http://purl.org/dc/terms/mediator
+<http://purl.org/dc/terms/mediator> rdf:type owl:AnnotationProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/audience> .
+
+
+###  http://purl.org/dc/terms/medium
+<http://purl.org/dc/terms/medium> rdf:type owl:AnnotationProperty ;
+                                  rdfs:subPropertyOf <http://purl.org/dc/terms/format> .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty ;
+                                    rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/references
+<http://purl.org/dc/terms/references> rdf:type owl:AnnotationProperty ;
+                                      rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/relation
+<http://purl.org/dc/terms/relation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/replaces
+<http://purl.org/dc/terms/replaces> rdf:type owl:AnnotationProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/requires
+<http://purl.org/dc/terms/requires> rdf:type owl:AnnotationProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty ;
+                                  rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/spatial
+<http://purl.org/dc/terms/spatial> rdf:type owl:AnnotationProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/coverage> .
+
+
+###  http://purl.org/dc/terms/subject
+<http://purl.org/dc/terms/subject> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/tableOfContents
+<http://purl.org/dc/terms/tableOfContents> rdf:type owl:AnnotationProperty ;
+                                           rdfs:subPropertyOf <http://purl.org/dc/terms/description> .
+
+
+###  http://purl.org/dc/terms/temporal
+<http://purl.org/dc/terms/temporal> rdf:type owl:AnnotationProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/coverage> .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty ;
+                                 rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/type
+<http://purl.org/dc/terms/type> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/valid
+<http://purl.org/dc/terms/valid> rdf:type owl:AnnotationProperty ;
+                                 rdfs:range rdfs:Literal .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty ;
+             rdfs:comment ""@en ;
+             rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+rdfs:isDefinedBy rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:AnnotationProperty ;
+           rdfs:comment ""@en ;
+           rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#seeAlso
+rdfs:seeAlso rdf:type owl:AnnotationProperty ;
+             rdfs:comment ""@en .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty ;
+                                               rdfs:comment "The range of skos:altLabel is the class of RDF plain literals."@en ,
+                                                            "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                               rdfs:label "alternative label"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "An alternative lexical label for a resource."@en ;
+                                               <http://www.w3.org/2004/02/skos/core#example> "Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel)."@en ;
+                                               rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                 rdfs:label "change note"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A note about a modification to a concept."@en ;
+                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                 rdfs:label "definition"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A statement or formal explanation of the meaning of a concept."@en ;
+                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty ;
+                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                    rdfs:label "editorial note"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "A note for an editor, translator or maintainer of the vocabulary."@en ;
+                                                    rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty ;
+                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                              rdfs:label "example"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "An example of the use of a concept."@en ;
+                                              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdf:type owl:AnnotationProperty ;
+                                                  rdfs:comment "The range of skos:hiddenLabel is the class of RDF plain literals."@en ,
+                                                               "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+                                                  rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                  rdfs:label "hidden label"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en ;
+                                                  rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> rdf:type owl:AnnotationProperty ;
+                                                  rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                  rdfs:label "history note"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "A note about the past state/use/meaning of a concept."@en ;
+                                                  rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty ;
+                                           rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                           rdfs:label "note"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A general note, for any purpose."@en ;
+                                           <http://www.w3.org/2004/02/skos/core#scopeNote> "This property may be used directly, or as a super-property for more specific note types."@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty ;
+                                                rdfs:comment "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag."@en ,
+                                                             "The range of skos:prefLabel is the class of RDF plain literals."@en ,
+                                                             """skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
+      disjoint properties."""@en ;
+                                                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                rdfs:label "preferred label"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "The preferred lexical label for a resource, in a given language."@en ;
+                                                rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty ;
+                                                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                rdfs:label "scope note"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "A note that helps to clarify the meaning and/or the use of a concept."@en ;
+                                                rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/ns/prov#aq
+<http://www.w3.org/ns/prov#aq> rdf:type owl:AnnotationProperty ;
+                               rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                               rdfs:subPropertyOf rdfs:seeAlso .
+
+
+###  http://www.w3.org/ns/prov#category
+<http://www.w3.org/ns/prov#category> rdf:type owl:AnnotationProperty ;
+                                     rdfs:comment "Classify prov-o terms into three categories, including 'starting-point', 'qualifed', and 'extended'. This classification is used by the prov-o html document to gently introduce prov-o terms to its users. "@en ;
+                                     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
+
+
+###  http://www.w3.org/ns/prov#component
+<http://www.w3.org/ns/prov#component> rdf:type owl:AnnotationProperty ;
+                                      rdfs:comment "Classify prov-o terms into six components according to prov-dm, including 'agents-responsibility', 'alternate', 'annotations', 'collections', 'derivations', and 'entities-activities'. This classification is used so that readers of prov-o specification can find its correspondence with the prov-dm specification."@en ;
+                                      rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
+
+
+###  http://www.w3.org/ns/prov#constraints
+<http://www.w3.org/ns/prov#constraints> rdf:type owl:AnnotationProperty ;
+                                        rdfs:comment "A reference to the principal section of the PROV-CONSTRAINTS document that describes this concept."@en ;
+                                        rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                        rdfs:subPropertyOf rdfs:seeAlso .
+
+
+###  http://www.w3.org/ns/prov#definition
+<http://www.w3.org/ns/prov#definition> rdf:type owl:AnnotationProperty ;
+                                       rdfs:comment "A definition quoted from PROV-DM or PROV-CONSTRAINTS that describes the concept expressed with this OWL term."@en ;
+                                       rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
+
+
+###  http://www.w3.org/ns/prov#dm
+<http://www.w3.org/ns/prov#dm> rdf:type owl:AnnotationProperty ;
+                               rdfs:comment "A reference to the principal section of the PROV-DM document that describes this concept."@en ;
+                               rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                               rdfs:subPropertyOf rdfs:seeAlso .
+
+
+###  http://www.w3.org/ns/prov#editorialNote
+<http://www.w3.org/ns/prov#editorialNote> rdf:type owl:AnnotationProperty ;
+                                          rdfs:comment "A note by the OWL development team about how this term expresses the PROV-DM concept, or how it should be used in context of semantic web or linked data."@en ;
+                                          rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
+
+
+###  http://www.w3.org/ns/prov#editorsDefinition
+<http://www.w3.org/ns/prov#editorsDefinition> rdf:type owl:AnnotationProperty ;
+                                              rdfs:comment "When the prov-o term does not have a definition drawn from prov-dm, and the prov-o editor provides one."@en ;
+                                              rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                              rdfs:subPropertyOf <http://www.w3.org/ns/prov#definition> .
+
+
+###  http://www.w3.org/ns/prov#inverse
+<http://www.w3.org/ns/prov#inverse> rdf:type owl:AnnotationProperty ;
+                                    rdfs:comment "PROV-O does not define all property inverses. The directionalities defined in PROV-O should be given preference over those not defined. However, if users wish to name the inverse of a PROV-O property, the local name given by prov:inverse should be used."@en ;
+                                    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                    rdfs:seeAlso <http://www.w3.org/TR/prov-o/#names-of-inverse-properties> .
+
+
+###  http://www.w3.org/ns/prov#n
+<http://www.w3.org/ns/prov#n> rdf:type owl:AnnotationProperty ;
+                              rdfs:comment "A reference to the principal section of the PROV-DM document that describes this concept."@en ;
+                              rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                              rdfs:subPropertyOf rdfs:seeAlso .
+
+
+###  http://www.w3.org/ns/prov#order
+<http://www.w3.org/ns/prov#order> rdf:type owl:AnnotationProperty ;
+                                  rdfs:comment "The position that this OWL term should be listed within documentation. The scope of the documentation (e.g., among all terms, among terms within a prov:category, among properties applying to a particular class, etc.) is unspecified."@en ;
+                                  rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
+
+
+###  http://www.w3.org/ns/prov#qualifiedForm
+<http://www.w3.org/ns/prov#qualifiedForm> rdf:type owl:AnnotationProperty ;
+                                          rdfs:comment """This annotation property links a subproperty of prov:wasInfluencedBy with the subclass of prov:Influence and the qualifying property that are used to qualify it. 
+
+Example annotation:
+
+    prov:wasGeneratedBy prov:qualifiedForm prov:qualifiedGeneration, prov:Generation .
+
+Then this unqualified assertion:
+
+    :entity1 prov:wasGeneratedBy :activity1 .
+
+can be qualified by adding:
+
+   :entity1 prov:qualifiedGeneration :entity1Gen .
+   :entity1Gen 
+       a prov:Generation, prov:Influence;
+       prov:activity :activity1;
+       :customValue 1337 .
+
+Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1) is mirrored as the value of the prov:activity (or prov:entity, or prov:agent) property on the influence class."""@en ;
+                                          rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                          rdfs:subPropertyOf rdfs:seeAlso .
+
+
+###  http://www.w3.org/ns/prov#sharesDefinitionWith
+<http://www.w3.org/ns/prov#sharesDefinitionWith> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                                 rdfs:subPropertyOf rdfs:seeAlso .
+
+
+###  http://www.w3.org/ns/prov#todo
+<http://www.w3.org/ns/prov#todo> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#unqualifiedForm
+<http://www.w3.org/ns/prov#unqualifiedForm> rdf:type owl:AnnotationProperty ;
+                                            rdfs:comment "Classes and properties used to qualify relationships are annotated with prov:unqualifiedForm to indicate the property used to assert an unqualified provenance relation."@en ;
+                                            rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                            rdfs:subPropertyOf rdfs:seeAlso .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://purl.org/dc/terms/Box
+<http://purl.org/dc/terms/Box> rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/ISO3166
+<http://purl.org/dc/terms/ISO3166> rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/ISO639-2
+<http://purl.org/dc/terms/ISO639-2> rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/ISO639-3
+<http://purl.org/dc/terms/ISO639-3> rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/Period
+<http://purl.org/dc/terms/Period> rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/Point
+<http://purl.org/dc/terms/Point> rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/RFC1766
+<http://purl.org/dc/terms/RFC1766> rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/RFC3066
+<http://purl.org/dc/terms/RFC3066> rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/RFC4646
+<http://purl.org/dc/terms/RFC4646> rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/RFC5646
+<http://purl.org/dc/terms/RFC5646> rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/URI
+<http://purl.org/dc/terms/URI> rdf:type rdfs:Datatype .
+
+
+###  http://purl.org/dc/terms/W3CDTF
+<http://purl.org/dc/terms/W3CDTF> rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/ns/prov#agent
+<http://www.w3.org/ns/prov#agent> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <http://www.w3.org/ns/prov#Association> ;
+                                  rdfs:range <http://www.w3.org/ns/prov#Agent> .
+
+
+###  http://www.w3.org/ns/prov#alternateOf
+<http://www.w3.org/ns/prov#alternateOf> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+                                        rdfs:range <http://www.w3.org/ns/prov#Entity> ;
+                                        rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                        rdfs:label "alternateOf" ;
+                                        rdfs:seeAlso <http://www.w3.org/ns/prov#specializationOf> ;
+                                        <http://www.w3.org/ns/prov#category> "expanded" ;
+                                        <http://www.w3.org/ns/prov#component> "alternate" ;
+                                        <http://www.w3.org/ns/prov#constraints> "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
+                                        <http://www.w3.org/ns/prov#definition> "Two alternate entities present aspects of the same thing. These aspects may be the same or different, and the alternate entities may or may not overlap in time."@en ;
+                                        <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-alternate"^^xsd:anyURI ;
+                                        <http://www.w3.org/ns/prov#inverse> "alternateOf" ;
+                                        <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-alternate"^^xsd:anyURI .
+
+
+###  http://www.w3.org/ns/prov#atLocation
+<http://www.w3.org/ns/prov#atLocation> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain [ rdf:type owl:Class ;
+                                                     owl:unionOf ( <http://www.w3.org/ns/prov#Activity>
+                                                                   <http://www.w3.org/ns/prov#Agent>
+                                                                   <http://www.w3.org/ns/prov#Entity>
+                                                                   <http://www.w3.org/ns/prov#InstantaneousEvent>
+                                                                 )
+                                                   ] ;
+                                       rdfs:range <http://www.w3.org/ns/prov#Location> ;
+                                       rdfs:comment "The Location of any resource."@en ,
+                                                    "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>." ;
+                                       rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                       rdfs:label "atLocation" ;
+                                       <http://www.w3.org/ns/prov#category> "expanded" ;
+                                       <http://www.w3.org/ns/prov#editorialNote> "The naming of prov:atLocation parallels prov:atTime, and is not named prov:hadLocation to avoid conflicting with the convention that prov:had* properties are used on prov:Influence classes."@en ,
+                                                                                 "This property is not functional because the many values could be at a variety of granularies (In this building, in this room, in that chair)."@en ;
+                                       <http://www.w3.org/ns/prov#inverse> "locationOf" ;
+                                       <http://www.w3.org/ns/prov#sharesDefinitionWith> <http://www.w3.org/ns/prov#Location> .
+
+
+###  http://www.w3.org/ns/prov#generated
+<http://www.w3.org/ns/prov#generated> rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf <http://www.w3.org/ns/prov#wasGeneratedBy> ;
+                                      rdfs:domain <http://www.w3.org/ns/prov#Activity> ;
+                                      rdfs:range <http://www.w3.org/ns/prov#Entity> ;
+                                      rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                      rdfs:label "generated" ;
+                                      <http://www.w3.org/ns/prov#category> "expanded" ;
+                                      <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                      <http://www.w3.org/ns/prov#editorialNote> "prov:generated is one of few inverse property defined, to allow Activity-oriented assertions in addition to Entity-oriented assertions."@en ;
+                                      <http://www.w3.org/ns/prov#inverse> "wasGeneratedBy" .
+
+
+###  http://www.w3.org/ns/prov#hadPlan
+<http://www.w3.org/ns/prov#hadPlan> rdf:type owl:ObjectProperty ;
+                                    rdfs:range <http://www.w3.org/ns/prov#Plan> ;
+                                    rdfs:comment "The _optional_ Plan adopted by an Agent in Association with some Activity. Plan specifications are out of the scope of this specification."@en ;
+                                    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                    rdfs:label "hadPlan" ;
+                                    <http://www.w3.org/ns/prov#category> "qualified" ;
+                                    <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
+                                    <http://www.w3.org/ns/prov#inverse> "wasPlanOf" ;
+                                    <http://www.w3.org/ns/prov#sharesDefinitionWith> <http://www.w3.org/ns/prov#Plan> .
+
+
+###  http://www.w3.org/ns/prov#hadPrimarySource
+<http://www.w3.org/ns/prov#hadPrimarySource> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+                                             rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+                                             rdfs:range <http://www.w3.org/ns/prov#Entity> ;
+                                             rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                             rdfs:label "hadPrimarySource" ;
+                                             <http://www.w3.org/ns/prov#category> "expanded" ;
+                                             <http://www.w3.org/ns/prov#component> "derivations" ;
+                                             <http://www.w3.org/ns/prov#inverse> "wasPrimarySourceOf" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.w3.org/ns/prov#hadPrimarySource> ;
+   owl:annotatedProperty rdfs:subPropertyOf ;
+   owl:annotatedTarget <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+   rdfs:comment "hadPrimarySource property is a particular case of wasDerivedFrom (see http://www.w3.org/TR/prov-dm/#term-original-source) that aims to give credit to the source that originated some information."
+ ] .
+
+
+###  http://www.w3.org/ns/prov#hadRole
+<http://www.w3.org/ns/prov#hadRole> rdf:type owl:ObjectProperty ;
+                                    rdfs:range <http://www.w3.org/ns/prov#Role> ;
+                                    rdfs:comment "The _optional_ Role that an Entity assumed in the context of an Activity. For example, :baking prov:used :spoon; prov:qualified [ a prov:Usage; prov:entity :spoon; prov:hadRole roles:mixing_implement ]."@en ,
+                                                 "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>." ;
+                                    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                    rdfs:label "hadRole" ;
+                                    <http://www.w3.org/ns/prov#category> "qualified" ;
+                                    <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
+                                    <http://www.w3.org/ns/prov#editorsDefinition> "prov:hadRole references the Role (i.e. the function of an entity with respect to an activity), in the context of an instantaneous usage, generation, association, start, and end."@en ;
+                                    <http://www.w3.org/ns/prov#inverse> "wasRoleIn" ;
+                                    <http://www.w3.org/ns/prov#sharesDefinitionWith> <http://www.w3.org/ns/prov#Role> .
+
+
+###  http://www.w3.org/ns/prov#invalidated
+<http://www.w3.org/ns/prov#invalidated> rdf:type owl:ObjectProperty ;
+                                        owl:inverseOf <http://www.w3.org/ns/prov#wasInvalidatedBy> ;
+                                        rdfs:domain <http://www.w3.org/ns/prov#Activity> ;
+                                        rdfs:range <http://www.w3.org/ns/prov#Entity> ;
+                                        rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                        rdfs:label "invalidated" ;
+                                        <http://www.w3.org/ns/prov#category> "expanded" ;
+                                        <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                        <http://www.w3.org/ns/prov#editorialNote> "prov:invalidated is one of few inverse property defined, to allow Activity-oriented assertions in addition to Entity-oriented assertions."@en ;
+                                        <http://www.w3.org/ns/prov#inverse> "wasInvalidatedBy" .
+
+
+###  http://www.w3.org/ns/prov#qualifiedAssociation
+<http://www.w3.org/ns/prov#qualifiedAssociation> rdf:type owl:ObjectProperty ;
+                                                 <http://purl.org/dc/terms/description> "A relation from an activity to an association qualifying the involvement of an agent in the activity." ;
+                                                 rdfs:comment "If this Activity prov:wasAssociatedWith Agent :ag, then it can qualify the Association using prov:qualifiedAssociation [ a prov:Association;  prov:agent :ag; :foo :bar ]." ;
+                                                 rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
+
+
+###  http://www.w3.org/ns/prov#specializationOf
+<http://www.w3.org/ns/prov#specializationOf> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://www.w3.org/ns/prov#alternateOf> ;
+                                             rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+                                             rdfs:range <http://www.w3.org/ns/prov#Entity> ;
+                                             rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                             rdfs:label "specializationOf" ;
+                                             rdfs:seeAlso <http://www.w3.org/ns/prov#alternateOf> ;
+                                             <http://www.w3.org/ns/prov#category> "expanded" ;
+                                             <http://www.w3.org/ns/prov#component> "alternate" ;
+                                             <http://www.w3.org/ns/prov#constraints> "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
+                                             <http://www.w3.org/ns/prov#definition> "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity."@en ;
+                                             <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-specialization"^^xsd:anyURI ;
+                                             <http://www.w3.org/ns/prov#inverse> "generalizationOf" ;
+                                             <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-specialization"^^xsd:anyURI .
+
+
+###  http://www.w3.org/ns/prov#used
+<http://www.w3.org/ns/prov#used> rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <http://www.w3.org/ns/prov#Activity> ;
+                                 rdfs:range <http://www.w3.org/ns/prov#Entity> ;
+                                 rdfs:comment "A prov:Entity that was used by this prov:Activity. For example, :baking prov:used :spoon, :egg, :oven ."@en ;
+                                 rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                 rdfs:label "used" ;
+                                 <http://www.w3.org/ns/prov#category> "starting-point" ;
+                                 <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                 <http://www.w3.org/ns/prov#inverse> "wasUsedBy" .
+
+
+###  http://www.w3.org/ns/prov#wasAssociatedWith
+<http://www.w3.org/ns/prov#wasAssociatedWith> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://www.w3.org/ns/prov#Activity> ;
+                                              rdfs:range <http://www.w3.org/ns/prov#Agent> ;
+                                              rdfs:comment "An prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity."@en ;
+                                              rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                              rdfs:label "wasAssociatedWith" ;
+                                              <http://www.w3.org/ns/prov#category> "starting-point" ;
+                                              <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
+                                              <http://www.w3.org/ns/prov#inverse> "wasAssociateFor" .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+                                           rdfs:range <http://www.w3.org/ns/prov#Entity> ;
+                                           rdfs:comment "The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable."@en ;
+                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                           rdfs:label "wasDerivedFrom" ;
+                                           <http://www.w3.org/ns/prov#category> "starting-point" ;
+                                           <http://www.w3.org/ns/prov#component> "derivations" ;
+                                           <http://www.w3.org/ns/prov#definition> "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
+                                           <http://www.w3.org/ns/prov#inverse> "hadDerivation" .
+
+
+###  http://www.w3.org/ns/prov#wasEndedBy
+<http://www.w3.org/ns/prov#wasEndedBy> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <http://www.w3.org/ns/prov#Activity> ;
+                                       rdfs:range <http://www.w3.org/ns/prov#Entity> ;
+                                       rdfs:comment "End is when an activity is deemed to have ended. An end may refer to an entity, known as trigger, that terminated the activity."@en ;
+                                       rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                       rdfs:label "wasEndedBy" ;
+                                       <http://www.w3.org/ns/prov#category> "expanded" ;
+                                       <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                       <http://www.w3.org/ns/prov#inverse> "ended" .
+
+
+###  http://www.w3.org/ns/prov#wasGeneratedBy
+<http://www.w3.org/ns/prov#wasGeneratedBy> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+                                           rdfs:range <http://www.w3.org/ns/prov#Activity> ;
+                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                           rdfs:label "wasGeneratedBy" ;
+                                           <http://www.w3.org/ns/prov#category> "starting-point" ;
+                                           <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                           <http://www.w3.org/ns/prov#inverse> "generated" .
+
+
+###  http://www.w3.org/ns/prov#wasInvalidatedBy
+<http://www.w3.org/ns/prov#wasInvalidatedBy> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+                                             rdfs:range <http://www.w3.org/ns/prov#Activity> ;
+                                             rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                             rdfs:label "wasInvalidatedBy" ;
+                                             <http://www.w3.org/ns/prov#category> "expanded" ;
+                                             <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                             <http://www.w3.org/ns/prov#inverse> "invalidated" .
+
+
+###  http://www.w3.org/ns/prov#wasQuotedFrom
+<http://www.w3.org/ns/prov#wasQuotedFrom> rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+                                          rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+                                          rdfs:range <http://www.w3.org/ns/prov#Entity> ;
+                                          rdfs:comment "An entity is derived from an original entity by copying, or 'quoting', some or all of it."@en ;
+                                          rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                          rdfs:label "wasQuotedFrom" ;
+                                          <http://www.w3.org/ns/prov#category> "expanded" ;
+                                          <http://www.w3.org/ns/prov#component> "derivations" ;
+                                          <http://www.w3.org/ns/prov#inverse> "quotedAs" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.w3.org/ns/prov#wasQuotedFrom> ;
+   owl:annotatedProperty rdfs:subPropertyOf ;
+   owl:annotatedTarget <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+   rdfs:comment "Quotation is a particular case of derivation (see http://www.w3.org/TR/prov-dm/#term-quotation) in which an entity is derived from an original entity by copying, or \"quoting\", some or all of it. "
+ ] .
+
+
+###  http://www.w3.org/ns/prov#wasRevisionOf
+<http://www.w3.org/ns/prov#wasRevisionOf> rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+                                          rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+                                          rdfs:range <http://www.w3.org/ns/prov#Entity> ;
+                                          rdfs:comment "A revision is a derivation that revises an entity into a revised version."@en ;
+                                          rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                          rdfs:label "wasRevisionOf" ;
+                                          <http://www.w3.org/ns/prov#category> "expanded" ;
+                                          <http://www.w3.org/ns/prov#component> "derivations" ;
+                                          <http://www.w3.org/ns/prov#inverse> "hadRevision" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.w3.org/ns/prov#wasRevisionOf> ;
+   owl:annotatedProperty rdfs:subPropertyOf ;
+   owl:annotatedTarget <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+   rdfs:comment """Revision is a derivation (see http://www.w3.org/TR/prov-dm/#term-Revision). Moreover, according to 
+http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 2012 'wasRevisionOf is a strict sub-relation of wasDerivedFrom since two entities e2 and e1 may satisfy wasDerivedFrom(e2,e1) without being a variant of each other.'"""
+ ] .
+
+
+###  http://www.w3.org/ns/prov#wasStartedBy
+<http://www.w3.org/ns/prov#wasStartedBy> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <http://www.w3.org/ns/prov#Activity> ;
+                                         rdfs:range <http://www.w3.org/ns/prov#Entity> ;
+                                         rdfs:comment "Start is when an activity is deemed to have started. A start may refer to an entity, known as trigger, that initiated the activity."@en ;
+                                         rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                         rdfs:label "wasStartedBy" ;
+                                         <http://www.w3.org/ns/prov#category> "expanded" ;
+                                         <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                         <http://www.w3.org/ns/prov#inverse> "started" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/ns/prov#atTime
+<http://www.w3.org/ns/prov#atTime> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <http://www.w3.org/ns/prov#InstantaneousEvent> ;
+                                   rdfs:range xsd:dateTime ;
+                                   rdfs:comment "The time at which an InstantaneousEvent occurred, in the form of xsd:dateTime."@en ;
+                                   rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                   rdfs:label "atTime" ;
+                                   <http://www.w3.org/ns/prov#category> "qualified" ;
+                                   <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                   <http://www.w3.org/ns/prov#sharesDefinitionWith> <http://www.w3.org/ns/prov#InstantaneousEvent> ;
+                                   <http://www.w3.org/ns/prov#unqualifiedForm> <http://www.w3.org/ns/prov#endedAtTime> ,
+                                                                               <http://www.w3.org/ns/prov#generatedAtTime> ,
+                                                                               <http://www.w3.org/ns/prov#invalidatedAtTime> ,
+                                                                               <http://www.w3.org/ns/prov#startedAtTime> .
+
+
+###  http://www.w3.org/ns/prov#endedAtTime
+<http://www.w3.org/ns/prov#endedAtTime> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://www.w3.org/ns/prov#Activity> ;
+                                        rdfs:range xsd:dateTime ;
+                                        rdfs:comment "The time at which an activity ended. See also prov:startedAtTime."@en ;
+                                        rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                        rdfs:label "endedAtTime" ;
+                                        <http://www.w3.org/ns/prov#category> "starting-point" ;
+                                        <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                        <http://www.w3.org/ns/prov#editorialNote> "It is the intent that the property chain holds: (prov:qualifiedEnd o prov:atTime) rdfs:subPropertyOf prov:endedAtTime."@en ;
+                                        <http://www.w3.org/ns/prov#qualifiedForm> <http://www.w3.org/ns/prov#atTime> .
+
+
+###  http://www.w3.org/ns/prov#generatedAtTime
+<http://www.w3.org/ns/prov#generatedAtTime> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+                                            rdfs:range xsd:dateTime ;
+                                            rdfs:comment "The time at which an entity was completely created and is available for use."@en ;
+                                            rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                            rdfs:label "generatedAtTime" ;
+                                            <http://www.w3.org/ns/prov#category> "expanded" ;
+                                            <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                            <http://www.w3.org/ns/prov#editorialNote> "It is the intent that the property chain holds: (prov:qualifiedGeneration o prov:atTime) rdfs:subPropertyOf prov:generatedAtTime."@en ;
+                                            <http://www.w3.org/ns/prov#qualifiedForm> <http://www.w3.org/ns/prov#atTime> .
+
+
+###  http://www.w3.org/ns/prov#invalidatedAtTime
+<http://www.w3.org/ns/prov#invalidatedAtTime> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+                                              rdfs:range xsd:dateTime ;
+                                              rdfs:comment "The time at which an entity was invalidated (i.e., no longer usable)."@en ;
+                                              rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                              rdfs:label "invalidatedAtTime" ;
+                                              <http://www.w3.org/ns/prov#category> "expanded" ;
+                                              <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                              <http://www.w3.org/ns/prov#editorialNote> "It is the intent that the property chain holds: (prov:qualifiedInvalidation o prov:atTime) rdfs:subPropertyOf prov:invalidatedAtTime."@en ;
+                                              <http://www.w3.org/ns/prov#qualifiedForm> <http://www.w3.org/ns/prov#atTime> .
+
+
+###  http://www.w3.org/ns/prov#startedAtTime
+<http://www.w3.org/ns/prov#startedAtTime> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <http://www.w3.org/ns/prov#Activity> ;
+                                          rdfs:range xsd:dateTime ;
+                                          rdfs:comment "The time at which an activity started. See also prov:endedAtTime."@en ;
+                                          rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                          rdfs:label "startedAtTime" ;
+                                          <http://www.w3.org/ns/prov#category> "starting-point" ;
+                                          <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                          <http://www.w3.org/ns/prov#editorialNote> "It is the intent that the property chain holds: (prov:qualifiedStart o prov:atTime) rdfs:subPropertyOf prov:startedAtTime."@en ;
+                                          <http://www.w3.org/ns/prov#qualifiedForm> <http://www.w3.org/ns/prov#atTime> .
+
+
+###  http://www.w3.org/ns/prov#value
+<http://www.w3.org/ns/prov#value> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain <http://www.w3.org/ns/prov#Entity> ;
+                                  rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                  rdfs:label "value" ;
+                                  <http://www.w3.org/ns/prov#category> "expanded" ;
+                                  <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                  <http://www.w3.org/ns/prov#definition> "Provides a value that is a direct representation of an entity."@en ;
+                                  <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-attribute-value"^^xsd:anyURI ;
+                                  <http://www.w3.org/ns/prov#editorialNote> "This property serves the same purpose as rdf:value, but has been reintroduced to avoid some of the definitional ambiguity in the RDF specification (specifically, 'may be used in describing structured values')."@en ,
+                                                                            "The editor's definition comes from http://www.w3.org/TR/rdf-primer/#rdfvalue" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Activity
+<http://www.w3.org/ns/prov#Activity> rdf:type owl:Class ;
+                                     owl:disjointWith <http://www.w3.org/ns/prov#Entity> ;
+                                     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                     rdfs:label "Activity" ;
+                                     <http://www.w3.org/ns/prov#category> "starting-point" ;
+                                     <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                     <http://www.w3.org/ns/prov#constraints> "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
+                                     <http://www.w3.org/ns/prov#definition> "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities." ;
+                                     <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Activity"^^xsd:anyURI ;
+                                     <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Activity"^^xsd:anyURI .
+
+
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
+                                  owl:disjointWith <http://www.w3.org/ns/prov#InstantaneousEvent> ;
+                                  rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                  rdfs:label "Agent" ;
+                                  <http://www.w3.org/ns/prov#category> "starting-point" ;
+                                  <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
+                                  <http://www.w3.org/ns/prov#definition> "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. "@en ;
+                                  <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^xsd:anyURI ;
+                                  <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent"^^xsd:anyURI .
+
+
+###  http://www.w3.org/ns/prov#Association
+<http://www.w3.org/ns/prov#Association> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class ;
+                                   owl:disjointWith <http://www.w3.org/ns/prov#InstantaneousEvent> ;
+                                   rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                   rdfs:label "Entity" ;
+                                   <http://www.w3.org/ns/prov#category> "starting-point" ;
+                                   <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                   <http://www.w3.org/ns/prov#constraints> "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
+                                   <http://www.w3.org/ns/prov#definition> "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary. "@en ;
+                                   <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-entity"^^xsd:anyURI ;
+                                   <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Entity"^^xsd:anyURI .
+
+
+###  http://www.w3.org/ns/prov#InstantaneousEvent
+<http://www.w3.org/ns/prov#InstantaneousEvent> rdf:type owl:Class ;
+                                               rdfs:comment "An instantaneous event, or event for short, happens in the world and marks a change in the world, in its activities and in its entities. The term 'event' is commonly used in process algebra with a similar meaning. Events represent communications or interactions; they are assumed to be atomic and instantaneous."@en ;
+                                               rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                               rdfs:label "InstantaneousEvent" ;
+                                               <http://www.w3.org/ns/prov#category> "qualified" ;
+                                               <http://www.w3.org/ns/prov#component> "entities-activities" ;
+                                               <http://www.w3.org/ns/prov#constraints> "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#dfn-event"^^xsd:anyURI ;
+                                               <http://www.w3.org/ns/prov#definition> "The PROV data model is implicitly based on a notion of instantaneous events (or just events), that mark transitions in the world. Events include generation, usage, or invalidation of entities, as well as starting or ending of activities. This notion of event is not first-class in the data model, but it is useful for explaining its other concepts and its semantics."@en .
+
+
+###  http://www.w3.org/ns/prov#Location
+<http://www.w3.org/ns/prov#Location> rdf:type owl:Class ;
+                                     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                     rdfs:label "Location" ;
+                                     rdfs:seeAlso <http://www.w3.org/ns/prov#atLocation> ;
+                                     <http://www.w3.org/ns/prov#category> "expanded" ;
+                                     <http://www.w3.org/ns/prov#definition> "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."@en ;
+                                     <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-attribute-location"^^xsd:anyURI ;
+                                     <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-attribute"^^xsd:anyURI .
+
+
+###  http://www.w3.org/ns/prov#Organization
+<http://www.w3.org/ns/prov#Organization> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+                                         rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                         rdfs:label "Organization" ;
+                                         <http://www.w3.org/ns/prov#category> "expanded" ;
+                                         <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
+                                         <http://www.w3.org/ns/prov#definition> "An organization is a social or legal institution such as a company, society, etc." ;
+                                         <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^xsd:anyURI ;
+                                         <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-types"^^xsd:anyURI .
+
+
+###  http://www.w3.org/ns/prov#Person
+<http://www.w3.org/ns/prov#Person> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+                                   rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                   rdfs:label "Person" ;
+                                   <http://www.w3.org/ns/prov#category> "expanded" ;
+                                   <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
+                                   <http://www.w3.org/ns/prov#definition> "Person agents are people."@en ;
+                                   <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^xsd:anyURI ;
+                                   <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-types"^^xsd:anyURI .
+
+
+###  http://www.w3.org/ns/prov#Plan
+<http://www.w3.org/ns/prov#Plan> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                                 rdfs:comment "There exist no prescriptive requirement on the nature of plans, their representation, the actions or steps they consist of, or their intended goals. Since plans may evolve over time, it may become necessary to track their provenance, so plans themselves are entities. Representing the plan explicitly in the provenance can be useful for various tasks: for example, to validate the execution as represented in the provenance record, to manage expectation failures, or to provide explanations."@en ;
+                                 rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                 rdfs:label "Plan" ;
+                                 <http://www.w3.org/ns/prov#category> "expanded" ,
+                                                                      "qualified" ;
+                                 <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
+                                 <http://www.w3.org/ns/prov#definition> "A plan is an entity that represents a set of actions or steps intended by one or more agents to achieve some goals." ;
+                                 <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Association"^^xsd:anyURI ;
+                                 <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Association"^^xsd:anyURI .
+
+
+###  http://www.w3.org/ns/prov#Role
+<http://www.w3.org/ns/prov#Role> rdf:type owl:Class ;
+                                 rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                 rdfs:label "Role" ;
+                                 rdfs:seeAlso <http://www.w3.org/ns/prov#hadRole> ;
+                                 <http://www.w3.org/ns/prov#category> "qualified" ;
+                                 <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
+                                 <http://www.w3.org/ns/prov#definition> "A role is the function of an entity or agent with respect to an activity, in the context of a usage, generation, invalidation, association, start, and end."@en ;
+                                 <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-attribute-role"^^xsd:anyURI ;
+                                 <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-attribute"^^xsd:anyURI .
+
+
+###  http://www.w3.org/ns/prov#SoftwareAgent
+<http://www.w3.org/ns/prov#SoftwareAgent> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+                                          rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                          rdfs:label "SoftwareAgent" ;
+                                          <http://www.w3.org/ns/prov#category> "expanded" ;
+                                          <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
+                                          <http://www.w3.org/ns/prov#definition> "A software agent is running software."@en ;
+                                          <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^xsd:anyURI ;
+                                          <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-types"^^xsd:anyURI .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.w3.org/ns/prov-o
+<http://www.w3.org/ns/prov-o> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/ns/prov-o-20130312
+<http://www.w3.org/ns/prov-o-20130312> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/ns/prov#EmptyCollection
+<http://www.w3.org/ns/prov#EmptyCollection> rdf:type owl:NamedIndividual .
+
+
+###  https://www.michaeldebellis.com/prov_lite
+<https://www.michaeldebellis.com/prov_lite> rdf:type owl:NamedIndividual ;
+                                            <http://www.w3.org/ns/prov#specializationOf> <http://www.w3.org/ns/prov-o> ;
+                                            <http://www.w3.org/ns/prov#wasRevisionOf> <http://www.w3.org/ns/prov-o-20130312> .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
