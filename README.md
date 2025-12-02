@@ -51,7 +51,8 @@ Its goals are:
 Thus, the Bro vocablaries complement rather than compete with other upper models. For more feature-rich upper ontologies, users may wish to consider:
 
 - **Gist** (Semantic Arts)  
-- **Schema.org**  
+- **Schema.org**
+- **[Simplified Upper Model Ontology](https://github.com/AIDAVA-DEV/sulo)**
 
 BRO complements these by offering a minimal, engineering-oriented starting point.
 
