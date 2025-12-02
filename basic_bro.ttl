@@ -1,20 +1,21 @@
-@prefix : <https://www.michaeldebellis.com/basic_bro/> .
+@prefix : <https://www.michaeldebellis.com/bro_pro/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://www.michaeldebellis.com/basic_bro/> .
+@base <https://www.michaeldebellis.com/bro_pro/> .
 
-<https://www.michaeldebellis.com/basic_bro> rdf:type owl:Ontology ;
-                                             <http://purl.org/dc/terms/contributor> "Michael DeBellis Orcid ID: 0000-0002-8824-9577"@en ;
-                                             <http://purl.org/dc/terms/created> "2025-28-11" ;
-                                             <http://purl.org/dc/terms/description> "Basic_Bro  provides core metadata annotation properties by reusing SKOS and DCTERMS. It is the foundational module used by all BRO layers and includes only annotation and datatype properties, with no classes or object properties."@en ;
-                                             <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ;
-                                             <http://purl.org/dc/terms/title> "Basic Reusable Ontology 0 (Bacic_Bro)"@en ;
-                                             owl:versionInfo "1.0.0" ;
-                                             <http://www.w3.org/2004/02/skos/core#editorialNote> "Basic_Bro includes the legacy Dublin Core (dc:) namespace only because it is automatically imported by DCTERMS for backward compatibility. BRO users should always use dcterms:* properties and never use dc:* properties."@en ;
-                                             <http://www.w3.org/2004/02/skos/core#note> "Basic_Bro reuses annotation and datatype properties from the SKOS and DCTERMS vocabularies. All classes and object properties from imported vocabularies have been removed to provide a clean metadata-only reusable layer."@en .
+<https://www.michaeldebellis.com/bro_pro> rdf:type owl:Ontology ;
+                                           owl:imports <http://www.w3.org/ns/prov-o-20130430> ;
+                                           <http://purl.org/dc/terms/contributor> "Michael DeBellis Orcid ID: 0000-0002-8824-9577"@en ;
+                                           <http://purl.org/dc/terms/created> "2025-28-11" ;
+                                           <http://purl.org/dc/terms/description> "Basic_Bro  provides core metadata annotation properties by reusing SKOS and DCTERMS. It is the foundational module used by all BRO layers and includes only annotation and datatype properties, with no classes or object properties."@en ;
+                                           <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ;
+                                           <http://purl.org/dc/terms/title> "Basic Reusable Ontology 0 (Bacic_Bro)"@en ;
+                                           owl:versionInfo "1.0.0" ;
+                                           <http://www.w3.org/2004/02/skos/core#editorialNote> "Basic_Bro includes the legacy Dublin Core (dc:) namespace only because it is automatically imported by DCTERMS for backward compatibility. BRO users should always use dcterms:* properties and never use dc:* properties."@en ;
+                                           <http://www.w3.org/2004/02/skos/core#note> "Basic_Bro reuses annotation and datatype properties from the SKOS and DCTERMS vocabularies. All classes and object properties from imported vocabularies have been removed to provide a clean metadata-only reusable layer."@en .
 
 #################################################################
 #    Annotation properties

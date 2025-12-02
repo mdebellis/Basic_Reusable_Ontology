@@ -11,7 +11,7 @@
                                            <http://purl.org/dc/terms/created> "2025-28-11" ;
                                            <http://purl.org/dc/terms/description> "Basic_Bro  provides core metadata annotation properties by reusing SKOS and DCTERMS. It is the foundational module used by all BRO layers and includes only annotation and datatype properties, with no classes or object properties."@en ;
                                            <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ;
-                                           <http://purl.org/dc/terms/title> "Basic Reusable Ontology 0 (Bacic_Bro)"@en ;
+                                           <http://purl.org/dc/terms/title> "Basic Reusable Ontology 1 big_bro"@en ;
                                            rdfs:comment "Subset of the W3C PROV-O ontology containing only the terms needed by the Basic Reusable Ontology (Big Bro). IRIs of PROV terms are preserved; content not required by Big Bro has been omitted."@en ;
                                            rdfs:seeAlso <http://www.w3.org/TR/prov-o/> ,
                                                         <http://www.w3.org/ns/prov> ;
