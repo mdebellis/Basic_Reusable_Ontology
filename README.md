@@ -50,7 +50,8 @@ Its goals are:
 
 Thus, the Bro vocablaries complement rather than compete with other upper models. For more feature-rich upper ontologies, users may wish to consider:
 
-- **Gist** (Semantic Arts)  
+- **[Gist (Semantic Arts)](https://www.semanticarts.com/gist/)**
+- **[Basic Formal Ontology (BFO)]([https://github.com/AIDAVA-DEV/sulo](https://basic-formal-ontology.org/))**
 - **Schema.org**
 - **[Simplified Upper Model Ontology](https://github.com/AIDAVA-DEV/sulo)**
 
