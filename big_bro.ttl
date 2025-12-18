@@ -7,6 +7,7 @@
 @base <https://www.michaeldebellis.com/big_bro/> .
 
 <https://www.michaeldebellis.com/big_bro> rdf:type owl:Ontology ;
+                                           owl:imports <https://w3id.org/sulo/sulo-0.2.9.ttl> ;
                                            <http://purl.org/dc/terms/contributor> "Michael DeBellis Orcid ID: 0000-0002-8824-9577"@en ;
                                            <http://purl.org/dc/terms/created> "2025-28-11" ;
                                            <http://purl.org/dc/terms/description> "Basic_Bro  provides core metadata annotation properties by reusing SKOS and DCTERMS. It is the foundational module used by all BRO layers and includes only annotation and datatype properties, with no classes or object properties."@en ;
@@ -21,7 +22,10 @@
 – Removed duplicate owl:Ontology declarations.
 – Moved orphaned ontology metadata triples (label, seeAlso, versionIRI, versionInfo, specializationOf, wasRevisionOf) under this ontology IRI.
 – Removed stray non-comment prose that appeared after the :wasStartedBy axiom and caused Turtle parse errors.
-– Trimmed PROV terms and axioms not required by Big Bro, without changing the IRIs or logical meaning of the retained PROV terms."""@en ;
+– Trimmed PROV terms and axioms not required by Big Bro, without changing the IRIs or logical meaning of the retained PROV terms."""@en ,
+                                                                                            """Imported SULO upper model: https://w3id.org/sulo/
+December 17, 2025
+Michael DeBellis""" ;
                                            <http://www.w3.org/2004/02/skos/core#editorialNote> "Basic_Bro includes the legacy Dublin Core (dc:) namespace only because it is automatically imported by DCTERMS for backward compatibility. BRO users should always use dcterms:* properties and never use dc:* properties."@en ;
                                            <http://www.w3.org/2004/02/skos/core#note> "Basic_Bro reuses annotation and datatype properties from the SKOS and DCTERMS vocabularies. All classes and object properties from imported vocabularies have been removed to provide a clean metadata-only reusable layer."@en .
 
