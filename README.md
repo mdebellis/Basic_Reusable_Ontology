@@ -67,10 +67,6 @@ so; `big_bro` is designed to **coexist** with alternative upper-level frameworks
   punning) to maintain OWL DL compatibility.
 - Provides a clean, production-ready provenance layer for operational knowledge graphs.
 
-The name `bro_pro` is intentional: it represents the **most comprehensive and
-“professional”** BRO layer, suitable for systems that require both shared domain
-patterns and explicit provenance.
-
 ---
 
 ## Design Philosophy
