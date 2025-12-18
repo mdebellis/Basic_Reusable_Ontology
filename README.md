@@ -17,17 +17,35 @@ BRO consists of **three layers**, each building on the previous one:
 
 ---
 
-## 2. `bro_pro`
+## 2.  `big_bro` 
 **Basic Bro plus a cleaned subset of PROV-O.**
 
 - Includes the essential **PROV entities (Activity, Agent, Entity)** and core provenance properties.
 - Retains the **canonical PROV IRIs**.
 - Removes problematic or unnecessary elements (e.g., PROV annotation/object-property punning) to maintain OWL DL compatibility.
 - Provides an extremely compact and clean PROV-based provenance layer for use in operational ontologies.
+### Integration with SULO (Simplified Upper-Level Ontology)
 
+`big_bro` incorporates selected alignments to the **Simplified Upper-Level Ontology (SULO)**  
+(<https://w3id.org/sulo/>), providing a lightweight upper-model scaffold for
+commonly reused concepts such as agents, organizations, activities, and related
+patterns.
+
+SULO is used in `big_bro` to:
+
+- Ground reusable classes (e.g., Person, Organization, Activity) in a
+  **small, coherent upper layer**.
+- Enable **cross-ontology compatibility** with other SULO-aligned models.
+- Avoid reinventing high-level distinctions while remaining implementation-oriented rather than philosophical.
+
+SULO is deliberately chosen because it shares BRO’s core design values:
+simplicity, modularity, and real-world applicability. Its role in `big_bro` is
+supportive rather than prescriptive—`big_bro` remains a practical foundation
+ontology, not a full upper ontology. Users who already rely on other upper models (e.g., BFO, Gist) may continue to do
+so; `big_bro` is designed to **coexist** with alternative upper-level frameworks.
 ---
 
-## 3. `big_bro`
+## 3.`bro_pro`
 **A larger reusable layer for domains that need shared agent and organization patterns.**
 
 - Includes all of **Basic Bro** and the PROV subset from **Bro Pro**.
