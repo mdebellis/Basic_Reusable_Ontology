@@ -36,9 +36,8 @@ SULO is used in `big_bro` to:
 - Ground reusable classes (e.g., Person, Organization, Activity) in a
   **small, coherent upper layer**.
 - Enable **cross-ontology compatibility** with other SULO-aligned models.
-- Avoid reinventing high-level distinctions while remaining
-  **implementation-oriented rather than philosophical**.
----
+- Avoid reinventing high-level distinctions while remaining implementation-oriented rather than philosophical.
+
 SULO is deliberately chosen because it shares BRO’s core design values:
 simplicity, modularity, and real-world applicability. Its role in `big_bro` is
 supportive rather than prescriptive—`big_bro` remains a practical foundation
