@@ -17,7 +17,7 @@ BRO consists of **three layers**, each building on the previous one:
 
 ---
 
-## 2. `bro_pro`
+## 2.  `big_bro` 
 **Basic Bro plus a cleaned subset of PROV-O.**
 
 - Includes the essential **PROV entities (Activity, Agent, Entity)** and core provenance properties.
@@ -42,13 +42,11 @@ SULO is used in `big_bro` to:
 SULO is deliberately chosen because it shares BRO’s core design values:
 simplicity, modularity, and real-world applicability. Its role in `big_bro` is
 supportive rather than prescriptive—`big_bro` remains a practical foundation
-ontology, not a full upper ontology.
-
-Users who already rely on other upper models (e.g., BFO, Gist) may continue to do
+ontology, not a full upper ontology. Users who already rely on other upper models (e.g., BFO, Gist) may continue to do
 so; `big_bro` is designed to **coexist** with alternative upper-level frameworks.
 ---
 
-## 3. `big_bro`
+## 3.`bro_pro`
 **A larger reusable layer for domains that need shared agent and organization patterns.**
 
 - Includes all of **Basic Bro** and the PROV subset from **Bro Pro**.
