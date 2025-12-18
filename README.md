@@ -94,7 +94,6 @@ For more feature-rich upper ontologies, users may wish to consider:
 - **[Gist (Semantic Arts)](https://www.semanticarts.com/gist/)**
 - **[Basic Formal Ontology (BFO)](https://basic-formal-ontology.org/)**
 - **Schema.org**
-- **[Simplified Upper-Level Ontology (SULO)](https://github.com/AIDAVA-DEV/sulo)**
 
 ---
 
