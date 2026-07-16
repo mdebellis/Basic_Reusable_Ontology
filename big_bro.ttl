@@ -688,6 +688,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                     "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>." ;
                                        rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                        rdfs:label "atLocation" ;
+                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "at location"@en ;
                                        <http://www.w3.org/ns/prov#category> "expanded" ;
                                        <http://www.w3.org/ns/prov#editorialNote> "The naming of prov:atLocation parallels prov:atTime, and is not named prov:hadLocation to avoid conflicting with the convention that prov:had* properties are used on prov:Influence classes."@en ,
                                                                                  "This property is not functional because the many values could be at a variety of granularies (In this building, in this room, in that chair)."@en ;
@@ -714,6 +715,7 @@ xsd:date rdf:type rdfs:Datatype .
                                     rdfs:comment "The _optional_ Plan adopted by an Agent in Association with some Activity. Plan specifications are out of the scope of this specification."@en ;
                                     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                     rdfs:label "hadPlan" ;
+                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "has plan"@en ;
                                     <http://www.w3.org/ns/prov#category> "qualified" ;
                                     <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
                                     <http://www.w3.org/ns/prov#inverse> "wasPlanOf" ;
