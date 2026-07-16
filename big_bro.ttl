@@ -1342,7 +1342,8 @@ owl:Thing rdf:type owl:Class .
                                    rdfs:comment "A collection is an information object for which there may be zero or more items."@en ;
                                    rdfs:label "collection"@en ;
                                    <http://www.w3.org/2004/02/skos/core#example> "a stamp collection, a murder of crows, the arm of a clinical trial"@en ;
-                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Collection"@en .
+                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Collection"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "An information object that aggregates or organizes other information objects. This class is not intended as a general superclass for social groups, physical aggregates, organizations, or arbitrary mathematical sets. MD 7/15/26"@en .
 
 
 ###  https://w3id.org/sulo/Duration
