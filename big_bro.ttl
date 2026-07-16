@@ -33,8 +33,8 @@
                                                         <http://www.w3.org/ns/prov> ;
                                            owl:backwardCompatibleWith <https://w3id.org/sulo/sulo-0.2.3.ttl> ;
                                            owl:priorVersion <https://w3id.org/sulo/sulo-0.2.3.ttl> ;
-                                           owl:versionInfo "0.2.14" ,
-                                                           "Recommendation version 2013-04-30, subsetted as PROV-Lite for Big Bro"@en ,
+                                           owl:versionInfo "Recommendation version 2013-04-30, subsetted as PROV-Lite for Big Bro"@en ,
+                                                           "0.2.14" ,
                                                            "1.0.0" ;
                                            <http://www.w3.org/2004/02/skos/core#changeNote> """2025-11-29 (M. DeBellis): Created PROV-Lite as a cleaned subset of the W3C PROV-O Turtle serialization for use with the Basic Reusable Ontology (Big Bro).
 – Removed duplicate owl:Ontology declarations.
@@ -727,6 +727,7 @@ xsd:date rdf:type rdfs:Datatype .
                                              rdfs:range <http://www.w3.org/ns/prov#Entity> ;
                                              rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                              rdfs:label "hadPrimarySource" ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "had primary source"@en ;
                                              <http://www.w3.org/ns/prov#category> "expanded" ;
                                              <http://www.w3.org/ns/prov#component> "derivations" ;
                                              <http://www.w3.org/ns/prov#inverse> "wasPrimarySourceOf" .
@@ -770,7 +771,8 @@ xsd:date rdf:type rdfs:Datatype .
 <http://www.w3.org/ns/prov#qualifiedAssociation> rdf:type owl:ObjectProperty ;
                                                  <http://purl.org/dc/terms/description> "A relation from an activity to an association qualifying the involvement of an agent in the activity." ;
                                                  rdfs:comment "If this Activity prov:wasAssociatedWith Agent :ag, then it can qualify the Association using prov:qualifiedAssociation [ a prov:Association;  prov:agent :ag; :foo :bar ]." ;
-                                                 rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
+                                                 rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "qualified association"@en .
 
 
 ###  http://www.w3.org/ns/prov#specializationOf
@@ -809,6 +811,7 @@ xsd:date rdf:type rdfs:Datatype .
                                               rdfs:comment "An prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity."@en ;
                                               rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                               rdfs:label "wasAssociatedWith" ;
+                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "was associated with"@en ;
                                               <http://www.w3.org/ns/prov#category> "starting-point" ;
                                               <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
                                               <http://www.w3.org/ns/prov#inverse> "wasAssociateFor" .
@@ -821,6 +824,7 @@ xsd:date rdf:type rdfs:Datatype .
                                            rdfs:comment "The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable."@en ;
                                            rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                            rdfs:label "wasDerivedFrom" ;
+                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "was derived from" ;
                                            <http://www.w3.org/ns/prov#category> "starting-point" ;
                                            <http://www.w3.org/ns/prov#component> "derivations" ;
                                            <http://www.w3.org/ns/prov#definition> "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
@@ -834,6 +838,7 @@ xsd:date rdf:type rdfs:Datatype .
                                        rdfs:comment "End is when an activity is deemed to have ended. An end may refer to an entity, known as trigger, that terminated the activity."@en ;
                                        rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                        rdfs:label "wasEndedBy" ;
+                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "was ended by"@en ;
                                        <http://www.w3.org/ns/prov#category> "expanded" ;
                                        <http://www.w3.org/ns/prov#component> "entities-activities" ;
                                        <http://www.w3.org/ns/prov#inverse> "ended" .
@@ -845,6 +850,7 @@ xsd:date rdf:type rdfs:Datatype .
                                            rdfs:range <http://www.w3.org/ns/prov#Activity> ;
                                            rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                            rdfs:label "wasGeneratedBy" ;
+                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "was generated by"@en ;
                                            <http://www.w3.org/ns/prov#category> "starting-point" ;
                                            <http://www.w3.org/ns/prov#component> "entities-activities" ;
                                            <http://www.w3.org/ns/prov#inverse> "generated" .
@@ -856,6 +862,7 @@ xsd:date rdf:type rdfs:Datatype .
                                              rdfs:range <http://www.w3.org/ns/prov#Activity> ;
                                              rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                              rdfs:label "wasInvalidatedBy" ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "was invalidated by"@en ;
                                              <http://www.w3.org/ns/prov#category> "expanded" ;
                                              <http://www.w3.org/ns/prov#component> "entities-activities" ;
                                              <http://www.w3.org/ns/prov#inverse> "invalidated" .
@@ -869,6 +876,7 @@ xsd:date rdf:type rdfs:Datatype .
                                           rdfs:comment "An entity is derived from an original entity by copying, or 'quoting', some or all of it."@en ;
                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                           rdfs:label "wasQuotedFrom" ;
+                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "was quoted from"@en ;
                                           <http://www.w3.org/ns/prov#category> "expanded" ;
                                           <http://www.w3.org/ns/prov#component> "derivations" ;
                                           <http://www.w3.org/ns/prov#inverse> "quotedAs" .
@@ -889,6 +897,7 @@ xsd:date rdf:type rdfs:Datatype .
                                           rdfs:comment "A revision is a derivation that revises an entity into a revised version."@en ;
                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                           rdfs:label "wasRevisionOf" ;
+                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "was revision of"@en ;
                                           <http://www.w3.org/ns/prov#category> "expanded" ;
                                           <http://www.w3.org/ns/prov#component> "derivations" ;
                                           <http://www.w3.org/ns/prov#inverse> "hadRevision" .
@@ -909,6 +918,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
                                          rdfs:comment "Start is when an activity is deemed to have started. A start may refer to an entity, known as trigger, that initiated the activity."@en ;
                                          rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                          rdfs:label "wasStartedBy" ;
+                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "was started by"@en ;
                                          <http://www.w3.org/ns/prov#category> "expanded" ;
                                          <http://www.w3.org/ns/prov#component> "entities-activities" ;
                                          <http://www.w3.org/ns/prov#inverse> "started" .
