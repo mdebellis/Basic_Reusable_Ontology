@@ -1,60 +1,60 @@
-@prefix : <https://www.michaeldebellis.com/big_bro/> .
+@prefix : <https://www.michaeldebellis.com/bro_place/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://www.michaeldebellis.com/big_bro/> .
+@base <https://www.michaeldebellis.com/bro_place/> .
 
-<https://www.michaeldebellis.com/big_bro> rdf:type owl:Ontology ;
-                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-4727-9435> ;
-                                           <http://purl.org/dc/terms/alternative> "SULO"@en ;
-                                           <http://purl.org/dc/terms/bibliographicCitation> "Michel Dumontier, Remzi Çelebi, Komal Gilani, Isabelle de Zegher, Katerina Serafimova, Catalina Martínez Costa and Stefan Schulz. SULO - a simplified upper-level ontology. Proceedings of the Joint Ontology Workshops (JOWO) - Episode XI: The Sicilian Summer under the Etna, co-located with the 15th International Conference on Formal Ontology in Information Systems (FOIS 2025), September 8-9, 2025, Catania, Italy"@en ;
-                                           <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-7222-3287> ,
-                                                                                  "Michael DeBellis Orcid ID: 0000-0002-8824-9577"@en ;
-                                           <http://purl.org/dc/terms/created> "2024-11-11" ,
-                                                                              "2025-28-11" ;
-                                           <http://purl.org/dc/terms/description> "Basic_Bro  provides core metadata annotation properties by reusing SKOS and DCTERMS. It is the foundational module used by all BRO layers and includes only annotation and datatype properties, with no classes or object properties."@en ;
-                                           <http://purl.org/dc/terms/issued> "2025-07-11" ;
-                                           <http://purl.org/dc/terms/language> <http://lexvo.org/id/iso639-1/en> ;
-                                           <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0> ,
-                                                                              <https://www.apache.org/licenses/LICENSE-2.0> ;
-                                           <http://purl.org/dc/terms/modified> "2026-05-19" ;
-                                           <http://purl.org/dc/terms/publisher> <https://orcid.org/0000-0003-4727-9435> ;
-                                           <http://purl.org/dc/terms/title> "Basic Reusable Ontology 1 big_bro"@en ,
-                                                                            "Simplified Upper Level Ontology"@en ;
-                                           <http://purl.org/pav/authoredBy> <https://orcid.org/0000-0003-4727-9435> ;
-                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "sulo" ;
-                                           <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/sulo/> ;
-                                           rdfs:comment "Subset of the W3C PROV-O ontology containing only the terms needed by the Basic Reusable Ontology (Big Bro). IRIs of PROV terms are preserved; content not required by Big Bro has been omitted."@en ,
-                                                        "The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph."@en ;
-                                           rdfs:label "Big Bro"@en ;
-                                           rdfs:seeAlso <http://www.w3.org/TR/prov-o/> ,
-                                                        <http://www.w3.org/ns/prov> ;
-                                           owl:backwardCompatibleWith <https://w3id.org/sulo/sulo-0.2.3.ttl> ;
-                                           owl:priorVersion <https://w3id.org/sulo/sulo-0.2.3.ttl> ;
-                                           owl:versionInfo "Recommendation version 2013-04-30, subsetted as PROV-Lite for Big Bro"@en ,
-                                                           "0.2.14" ,
-                                                           "1.0.0" ;
-                                           <http://www.w3.org/2004/02/skos/core#changeNote> """2025-11-29 (M. DeBellis): Created PROV-Lite as a cleaned subset of the W3C PROV-O Turtle serialization for use with the Basic Reusable Ontology (Big Bro).
+<https://www.michaeldebellis.com/bro_place> rdf:type owl:Ontology ;
+                                             <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-4727-9435> ;
+                                             <http://purl.org/dc/terms/alternative> "SULO"@en ;
+                                             <http://purl.org/dc/terms/bibliographicCitation> "Michel Dumontier, Remzi Çelebi, Komal Gilani, Isabelle de Zegher, Katerina Serafimova, Catalina Martínez Costa and Stefan Schulz. SULO - a simplified upper-level ontology. Proceedings of the Joint Ontology Workshops (JOWO) - Episode XI: The Sicilian Summer under the Etna, co-located with the 15th International Conference on Formal Ontology in Information Systems (FOIS 2025), September 8-9, 2025, Catania, Italy"@en ;
+                                             <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-7222-3287> ,
+                                                                                    "Michael DeBellis Orcid ID: 0000-0002-8824-9577"@en ;
+                                             <http://purl.org/dc/terms/created> "2024-11-11" ,
+                                                                                "2025-28-11" ;
+                                             <http://purl.org/dc/terms/description> "Basic_Bro  provides core metadata annotation properties by reusing SKOS and DCTERMS. It is the foundational module used by all BRO layers and includes only annotation and datatype properties, with no classes or object properties."@en ;
+                                             <http://purl.org/dc/terms/issued> "2025-07-11" ;
+                                             <http://purl.org/dc/terms/language> <http://lexvo.org/id/iso639-1/en> ;
+                                             <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0> ,
+                                                                                <https://www.apache.org/licenses/LICENSE-2.0> ;
+                                             <http://purl.org/dc/terms/modified> "2026-05-19" ;
+                                             <http://purl.org/dc/terms/publisher> <https://orcid.org/0000-0003-4727-9435> ;
+                                             <http://purl.org/dc/terms/title> "Basic Reusable Ontology 1 big_bro"@en ,
+                                                                              "Simplified Upper Level Ontology"@en ;
+                                             <http://purl.org/pav/authoredBy> <https://orcid.org/0000-0003-4727-9435> ;
+                                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "sulo" ;
+                                             <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/sulo/> ;
+                                             rdfs:comment "Subset of the W3C PROV-O ontology containing only the terms needed by the Basic Reusable Ontology (Big Bro). IRIs of PROV terms are preserved; content not required by Big Bro has been omitted."@en ,
+                                                          "The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph."@en ;
+                                             rdfs:label "Big Bro"@en ;
+                                             rdfs:seeAlso <http://www.w3.org/TR/prov-o/> ,
+                                                          <http://www.w3.org/ns/prov> ;
+                                             owl:backwardCompatibleWith <https://w3id.org/sulo/sulo-0.2.3.ttl> ;
+                                             owl:priorVersion <https://w3id.org/sulo/sulo-0.2.3.ttl> ;
+                                             owl:versionInfo "Recommendation version 2013-04-30, subsetted as PROV-Lite for Big Bro"@en ,
+                                                             "0.2.14" ,
+                                                             "1.0.0" ;
+                                             <http://www.w3.org/2004/02/skos/core#changeNote> """2025-11-29 (M. DeBellis): Created PROV-Lite as a cleaned subset of the W3C PROV-O Turtle serialization for use with the Basic Reusable Ontology (Big Bro).
 – Removed duplicate owl:Ontology declarations.
 – Moved orphaned ontology metadata triples (label, seeAlso, versionIRI, versionInfo, specializationOf, wasRevisionOf) under this ontology IRI.
 – Removed stray non-comment prose that appeared after the :wasStartedBy axiom and caused Turtle parse errors.
 – Trimmed PROV terms and axioms not required by Big Bro, without changing the IRIs or logical meaning of the retained PROV terms."""@en ,
-                                                                                            """Imported SULO upper model: https://w3id.org/sulo/
+                                                                                              """Imported SULO upper model: https://w3id.org/sulo/
 December 17, 2025
 Michael DeBellis""" ;
-                                           <http://www.w3.org/2004/02/skos/core#editorialNote> "Basic_Bro includes the legacy Dublin Core (dc:) namespace only because it is automatically imported by DCTERMS for backward compatibility. BRO users should always use dcterms:* properties and never use dc:* properties."@en ;
-                                           <http://www.w3.org/2004/02/skos/core#note> "Basic_Bro reuses annotation and datatype properties from the SKOS and DCTERMS vocabularies. All classes and object properties from imported vocabularies have been removed to provide a clean metadata-only reusable layer."@en ;
-                                           <http://www.w3.org/ns/dcat#accessURL> <https://w3id.org/sulo/sulo.ttl> ;
-                                           <http://xmlns.com/foaf/0.1/homepage> <https://github.com/AIDAVA-DEV/sulo> ;
-                                           <https://schema.org/funding> "This work is partially supported by the AIDAVA project (GA 101057062), as part of the European Union's Horizon Europe research and innovation programme."@en ;
-                                           <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov/vocabs/sulo> ;
-                                           <https://w3id.org/mod#definitionProperty> rdfs:comment ;
-                                           <https://w3id.org/mod#hasRepresentationLanguage> <http://omv.ontoware.org/2005/05/ontology#OWL> ;
-                                           <https://w3id.org/mod#hasSyntax> <http://www.w3.org/ns/formats/Turtle> ;
-                                           <https://w3id.org/mod#prefLabelProperty> rdfs:label ;
-                                           <https://w3id.org/mod#status> "active" .
+                                             <http://www.w3.org/2004/02/skos/core#editorialNote> "Basic_Bro includes the legacy Dublin Core (dc:) namespace only because it is automatically imported by DCTERMS for backward compatibility. BRO users should always use dcterms:* properties and never use dc:* properties."@en ;
+                                             <http://www.w3.org/2004/02/skos/core#note> "Basic_Bro reuses annotation and datatype properties from the SKOS and DCTERMS vocabularies. All classes and object properties from imported vocabularies have been removed to provide a clean metadata-only reusable layer."@en ;
+                                             <http://www.w3.org/ns/dcat#accessURL> <https://w3id.org/sulo/sulo.ttl> ;
+                                             <http://xmlns.com/foaf/0.1/homepage> <https://github.com/AIDAVA-DEV/sulo> ;
+                                             <https://schema.org/funding> "This work is partially supported by the AIDAVA project (GA 101057062), as part of the European Union's Horizon Europe research and innovation programme."@en ;
+                                             <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov/vocabs/sulo> ;
+                                             <https://w3id.org/mod#definitionProperty> rdfs:comment ;
+                                             <https://w3id.org/mod#hasRepresentationLanguage> <http://omv.ontoware.org/2005/05/ontology#OWL> ;
+                                             <https://w3id.org/mod#hasSyntax> <http://www.w3.org/ns/formats/Turtle> ;
+                                             <https://w3id.org/mod#prefLabelProperty> rdfs:label ;
+                                             <https://w3id.org/mod#status> "active" .
 
 #################################################################
 #    Annotation properties
@@ -1092,6 +1092,37 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
                                  rdfs:label "refers to"@en .
 
 
+###  https://www.michaeldebellis.com/bro_place/geo_contains
+:geo_contains rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :geo_contains_transitive ;
+              owl:inverseOf :geo_is_contained_in ;
+              rdfs:domain <https://w3id.org/sulo/SpatialObject> ;
+              rdfs:range <https://w3id.org/sulo/SpatialObject> ;
+              <http://purl.org/dc/terms/created> "2026-07-20T22:30:29Z"^^xsd:dateTime ;
+              <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+
+
+###  https://www.michaeldebellis.com/bro_place/geo_contains_transitive
+:geo_contains_transitive rdf:type owl:ObjectProperty ,
+                                  owl:TransitiveProperty ;
+                         <http://purl.org/dc/terms/created> "2026-07-20T22:32:27Z"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+
+
+###  https://www.michaeldebellis.com/bro_place/geo_is_contained_in
+:geo_is_contained_in rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :geo_is_contained_in_transitive ;
+                     <http://purl.org/dc/terms/created> "2026-07-20T22:31:39Z"^^xsd:dateTime ;
+                     <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+
+
+###  https://www.michaeldebellis.com/bro_place/geo_is_contained_in_transitive
+:geo_is_contained_in_transitive rdf:type owl:ObjectProperty ,
+                                         owl:TransitiveProperty ;
+                                <http://purl.org/dc/terms/created> "2026-07-20T22:33:13Z"^^xsd:dateTime ;
+                                <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -1257,7 +1288,6 @@ owl:Thing rdf:type owl:Class .
                                      rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                      rdfs:label "Location" ;
                                      rdfs:seeAlso <http://www.w3.org/ns/prov#atLocation> ;
-                                     <http://www.w3.org/2004/02/skos/core#historyNote> "I made prov:Location a subclass of sulo:Spatial_Object MD 7/20/26"@en ;
                                      <http://www.w3.org/ns/prov#category> "expanded" ;
                                      <http://www.w3.org/ns/prov#definition> "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."@en ;
                                      <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-attribute-location"^^xsd:anyURI ;
@@ -1562,6 +1592,48 @@ owl:Thing rdf:type owl:Class .
                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Unit"@en .
 
 
+###  https://www.michaeldebellis.com/bro_place/City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.w3.org/ns/prov#Location> ;
+      <http://purl.org/dc/terms/created> "2026-07-20T22:27:46Z"^^xsd:dateTime ;
+      <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+
+
+###  https://www.michaeldebellis.com/bro_place/Continent
+:Continent rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/prov#Location> ;
+           <http://purl.org/dc/terms/created> "2026-07-20T22:27:46Z"^^xsd:dateTime ;
+           <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+
+
+###  https://www.michaeldebellis.com/bro_place/District
+:District rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/ns/prov#Location> ;
+          <http://purl.org/dc/terms/created> "2026-07-20T22:27:46Z"^^xsd:dateTime ;
+          <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+
+
+###  https://www.michaeldebellis.com/bro_place/Nation
+:Nation rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.w3.org/ns/prov#Location> ;
+        <http://purl.org/dc/terms/created> "2026-07-20T22:27:46Z"^^xsd:dateTime ;
+        <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+
+
+###  https://www.michaeldebellis.com/bro_place/Province
+:Province rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/ns/prov#Location> ;
+          <http://purl.org/dc/terms/created> "2026-07-20T22:27:46Z"^^xsd:dateTime ;
+          <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+
+
+###  https://www.michaeldebellis.com/bro_place/State
+:State rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.w3.org/ns/prov#Location> ;
+       <http://purl.org/dc/terms/created> "2026-07-20T22:27:46Z"^^xsd:dateTime ;
+       <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -1601,6 +1673,17 @@ owl:Thing rdf:type owl:Class .
   owl:members ( <https://w3id.org/sulo/Duration>
                 <https://w3id.org/sulo/TimeInstant>
                 <https://w3id.org/sulo/TimeInterval>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :City
+                :Continent
+                :District
+                :Nation
+                :Province
+                :State
               )
 ] .
 
