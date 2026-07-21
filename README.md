@@ -95,14 +95,19 @@ For more feature-rich upper ontologies, users may wish to consider:
 ---
 
 ## Repository Contents
-
-- `basic_bro.ttl` — Core annotation properties
-- `big_bro.ttl` — Reusable agent and organization patterns (SULO-aligned)
-- `bro_pro.ttl` — Big Bro plus a cleaned PROV-O subset
+# Top Level
+- `basic_bro.ttl` — Core annotation properties. Status: Usable.
+- `big_bro.ttl` — Reusable agent and organization patterns (SULO-aligned). Status: Usable. 
+- `bro_pro.ttl` — Big Bro plus a cleaned PROV-O subset. Status: still under development, no ontology currently available. 
+# vocabularies
+Ontologies used by the bros.
+# domain_bros
+Extensions of the bros with additional domain knowledge. 
+- Right now the only example is pro_place.ttl that adds place classes as subclasses of prov:Location. E.g., State, City, Nation, Continent... and a geo_contains and geo_is_contained_in object properties (inverses) with appropriate transitive super properties. The status of this is under development. Currently not usable. 
 
 ---
 
 ## Status
 
-Work in progress (active development).  
+Work in progress (active development).  The basic_bro and big_bro are usable although subject to change. The bro_pro ontology is not yet available, may not be available for a while. The one domain specific ontology: bro_place is not yet usable but should be soon (end of July 2026). 
 Feedback and suggestions are welcome.
