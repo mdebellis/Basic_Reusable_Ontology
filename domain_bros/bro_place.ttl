@@ -1099,7 +1099,8 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
               rdfs:domain <https://w3id.org/sulo/SpatialObject> ;
               rdfs:range <https://w3id.org/sulo/SpatialObject> ;
               <http://purl.org/dc/terms/created> "2026-07-20T22:30:29Z"^^xsd:dateTime ;
-              <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+              <http://purl.org/dc/terms/creator> "Michael DeBellis" ;
+              <http://www.w3.org/ns/prov#definition> "Added geo_contains and geo_is_contained_in to model containment in sulo:Spatial_Object MD 7/20/26"@en .
 
 
 ###  https://www.michaeldebellis.com/bro_place/geo_contains_transitive
