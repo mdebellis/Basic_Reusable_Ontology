@@ -103,7 +103,7 @@ For more feature-rich upper ontologies, users may wish to consider:
 Ontologies used by the bros.
 # domain_bros
 Extensions of the bros with additional domain knowledge. 
-- Right now the only example is pro_place.ttl that adds place classes as subclasses of prov:Location. E.g., State, City, Nation, Continent... and a geo_contains and geo_is_contained_in object properties (inverses) with appropriate transitive super properties. The status of this is under development. Currently not usable.
+- Right now the only example is pro_place.ttl that adds place classes as subclasses of prov:Location. E.g., State, City, Nation, Continent... and a geo_contains and geo_is_contained_in object properties (inverses) with appropriate transitive super properties. The status of this is under development. Currently usable but subject to change.
 # archive
 Archived files that are no longer used. Ignore these, kept because I'm an ontology horder (hate to throw things away because you never know). 
 
@@ -111,5 +111,5 @@ Archived files that are no longer used. Ignore these, kept because I'm an ontolo
 
 ## Status
 
-Work in progress (active development).  The basic_bro and big_bro are usable although subject to change. The bro_pro ontology is not yet available, may not be available for a while. The one domain specific ontology: bro_place is not yet usable but should be soon (end of July 2026). 
+Work in progress (active development).  The basic_bro and big_bro are usable although subject to change. The bro_pro ontology is not yet available, may not be available for a while. The one domain specific ontology: bro_place is usable but subject to change. 
 Feedback and suggestions are welcome.
