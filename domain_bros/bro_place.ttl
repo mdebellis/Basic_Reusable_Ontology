@@ -1,28 +1,46 @@
 @prefix : <https://www.michaeldebellis.com/bro_place/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix kw: <http://franz.com/ns/keyword#> .
+@prefix nd: <http://franz.com/ns/allegrograph/5.0/geo/nd#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix err: <http://www.w3.org/2005/xqt-errors#> .
+@prefix fti: <http://franz.com/ns/allegrograph/2.2/textindex/> .
+@prefix llm: <http://franz.com/ns/allegrograph/8.0.0/llm/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vdb: <http://franz.com/vdb/gen/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ndfn: <http://franz.com/ns/allegrograph/5.0/geo/nd/fn#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vdbid: <http://franz.com/vdb/id/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix keyword: <http://franz.com/ns/keyword#> .
+@prefix vdbprop: <http://franz.com/vdb/prop/> .
+@prefix vdbcluster: <http://franz.com/vdb/cluster/> .
 @base <https://www.michaeldebellis.com/bro_place/> .
 
 <https://www.michaeldebellis.com/bro_place> rdf:type owl:Ontology ;
-                                             <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-4727-9435> ;
-                                             <http://purl.org/dc/terms/alternative> "SULO"@en ;
-                                             <http://purl.org/dc/terms/bibliographicCitation> "Michel Dumontier, Remzi Çelebi, Komal Gilani, Isabelle de Zegher, Katerina Serafimova, Catalina Martínez Costa and Stefan Schulz. SULO - a simplified upper-level ontology. Proceedings of the Joint Ontology Workshops (JOWO) - Episode XI: The Sicilian Summer under the Etna, co-located with the 15th International Conference on Formal Ontology in Information Systems (FOIS 2025), September 8-9, 2025, Catania, Italy"@en ;
-                                             <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-7222-3287> ,
-                                                                                    "Michael DeBellis Orcid ID: 0000-0002-8824-9577"@en ;
-                                             <http://purl.org/dc/terms/created> "2024-11-11" ,
-                                                                                "2025-28-11" ;
-                                             <http://purl.org/dc/terms/description> "Basic_Bro  provides core metadata annotation properties by reusing SKOS and DCTERMS. It is the foundational module used by all BRO layers and includes only annotation and datatype properties, with no classes or object properties."@en ;
-                                             <http://purl.org/dc/terms/issued> "2025-07-11" ;
-                                             <http://purl.org/dc/terms/language> <http://lexvo.org/id/iso639-1/en> ;
-                                             <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0> ,
-                                                                                <https://www.apache.org/licenses/LICENSE-2.0> ;
-                                             <http://purl.org/dc/terms/modified> "2026-05-19" ;
-                                             <http://purl.org/dc/terms/publisher> <https://orcid.org/0000-0003-4727-9435> ;
-                                             <http://purl.org/dc/terms/title> "Basic Reusable Ontology 1 big_bro"@en ,
-                                                                              "Simplified Upper Level Ontology"@en ;
+                                             dc:creator <https://orcid.org/0000-0003-4727-9435> ;
+                                             dcterms:alternative "SULO"@en ;
+                                             dcterms:bibliographicCitation "Michel Dumontier, Remzi Çelebi, Komal Gilani, Isabelle de Zegher, Katerina Serafimova, Catalina Martínez Costa and Stefan Schulz. SULO - a simplified upper-level ontology. Proceedings of the Joint Ontology Workshops (JOWO) - Episode XI: The Sicilian Summer under the Etna, co-located with the 15th International Conference on Formal Ontology in Information Systems (FOIS 2025), September 8-9, 2025, Catania, Italy"@en ;
+                                             dcterms:contributor <https://orcid.org/0000-0001-7222-3287> ,
+                                                                 "Michael DeBellis Orcid ID: 0000-0002-8824-9577"@en ;
+                                             dcterms:created "2024-11-11" ,
+                                                             "2025-28-11" ;
+                                             dcterms:description "Basic_Bro  provides core metadata annotation properties by reusing SKOS and DCTERMS. It is the foundational module used by all BRO layers and includes only annotation and datatype properties, with no classes or object properties."@en ;
+                                             dcterms:issued "2025-07-11" ;
+                                             dcterms:language <http://lexvo.org/id/iso639-1/en> ;
+                                             dcterms:license <https://creativecommons.org/publicdomain/zero/1.0> ,
+                                                             <https://www.apache.org/licenses/LICENSE-2.0> ;
+                                             dcterms:modified "2026-05-19" ;
+                                             dcterms:publisher <https://orcid.org/0000-0003-4727-9435> ;
+                                             dcterms:title "Basic Reusable Ontology 1 big_bro"@en ,
+                                                           "Simplified Upper Level Ontology"@en ;
                                              <http://purl.org/pav/authoredBy> <https://orcid.org/0000-0003-4727-9435> ;
                                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "sulo" ;
                                              <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/sulo/> ;
@@ -36,18 +54,18 @@
                                              owl:versionInfo "Recommendation version 2013-04-30, subsetted as PROV-Lite for Big Bro"@en ,
                                                              "0.2.14" ,
                                                              "1.0.0" ;
-                                             <http://www.w3.org/2004/02/skos/core#changeNote> """2025-11-29 (M. DeBellis): Created PROV-Lite as a cleaned subset of the W3C PROV-O Turtle serialization for use with the Basic Reusable Ontology (Big Bro).
+                                             skos:changeNote """2025-11-29 (M. DeBellis): Created PROV-Lite as a cleaned subset of the W3C PROV-O Turtle serialization for use with the Basic Reusable Ontology (Big Bro).
 – Removed duplicate owl:Ontology declarations.
 – Moved orphaned ontology metadata triples (label, seeAlso, versionIRI, versionInfo, specializationOf, wasRevisionOf) under this ontology IRI.
 – Removed stray non-comment prose that appeared after the :wasStartedBy axiom and caused Turtle parse errors.
 – Trimmed PROV terms and axioms not required by Big Bro, without changing the IRIs or logical meaning of the retained PROV terms."""@en ,
-                                                                                              """Imported SULO upper model: https://w3id.org/sulo/
+                                                             """enImported SULO upper model: https://w3id.org/sulo/
 December 17, 2025
 Michael DeBellis""" ;
-                                             <http://www.w3.org/2004/02/skos/core#editorialNote> "Basic_Bro includes the legacy Dublin Core (dc:) namespace only because it is automatically imported by DCTERMS for backward compatibility. BRO users should always use dcterms:* properties and never use dc:* properties."@en ;
-                                             <http://www.w3.org/2004/02/skos/core#note> "Basic_Bro reuses annotation and datatype properties from the SKOS and DCTERMS vocabularies. All classes and object properties from imported vocabularies have been removed to provide a clean metadata-only reusable layer."@en ;
+                                             skos:editorialNote "Basic_Bro includes the legacy Dublin Core (dc:) namespace only because it is automatically imported by DCTERMS for backward compatibility. BRO users should always use dcterms:* properties and never use dc:* properties."@en ;
+                                             skos:note "Basic_Bro reuses annotation and datatype properties from the SKOS and DCTERMS vocabularies. All classes and object properties from imported vocabularies have been removed to provide a clean metadata-only reusable layer."@en ;
                                              <http://www.w3.org/ns/dcat#accessURL> <https://w3id.org/sulo/sulo.ttl> ;
-                                             <http://xmlns.com/foaf/0.1/homepage> <https://github.com/AIDAVA-DEV/sulo> ;
+                                             foaf:homepage <https://github.com/AIDAVA-DEV/sulo> ;
                                              <https://schema.org/funding> "This work is partially supported by the AIDAVA project (GA 101057062), as part of the European Union's Horizon Europe research and innovation programme."@en ;
                                              <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov/vocabs/sulo> ;
                                              <https://w3id.org/mod#definitionProperty> rdfs:comment ;
@@ -65,256 +83,256 @@ Michael DeBellis""" ;
 
 
 ###  http://purl.org/dc/elements/1.1/creator
-<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+dc:creator rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/abstract
-<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/terms/description> .
+dcterms:abstract rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dcterms:description .
 
 
 ###  http://purl.org/dc/terms/accessRights
-<http://purl.org/dc/terms/accessRights> rdf:type owl:AnnotationProperty ;
-                                        rdfs:subPropertyOf <http://purl.org/dc/terms/rights> .
+dcterms:accessRights rdf:type owl:AnnotationProperty ;
+                     rdfs:subPropertyOf dcterms:rights .
 
 
 ###  http://purl.org/dc/terms/accrualMethod
-<http://purl.org/dc/terms/accrualMethod> rdf:type owl:AnnotationProperty ;
-                                         rdfs:domain <http://purl.org/dc/dcmitype/Collection> .
+dcterms:accrualMethod rdf:type owl:AnnotationProperty ;
+                      rdfs:domain <http://purl.org/dc/dcmitype/Collection> .
 
 
 ###  http://purl.org/dc/terms/accrualPeriodicity
-<http://purl.org/dc/terms/accrualPeriodicity> rdf:type owl:AnnotationProperty ;
-                                              rdfs:domain <http://purl.org/dc/dcmitype/Collection> .
+dcterms:accrualPeriodicity rdf:type owl:AnnotationProperty ;
+                           rdfs:domain <http://purl.org/dc/dcmitype/Collection> .
 
 
 ###  http://purl.org/dc/terms/accrualPolicy
-<http://purl.org/dc/terms/accrualPolicy> rdf:type owl:AnnotationProperty ;
-                                         rdfs:domain <http://purl.org/dc/dcmitype/Collection> .
+dcterms:accrualPolicy rdf:type owl:AnnotationProperty ;
+                      rdfs:domain <http://purl.org/dc/dcmitype/Collection> .
 
 
 ###  http://purl.org/dc/terms/alternative
-<http://purl.org/dc/terms/alternative> rdf:type owl:AnnotationProperty ;
-                                       rdfs:range rdfs:Literal .
+dcterms:alternative rdf:type owl:AnnotationProperty ;
+                    rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/audience
-<http://purl.org/dc/terms/audience> rdf:type owl:AnnotationProperty .
+dcterms:audience rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/available
-<http://purl.org/dc/terms/available> rdf:type owl:AnnotationProperty ;
-                                     rdfs:range rdfs:Literal .
+dcterms:available rdf:type owl:AnnotationProperty ;
+                  rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/bibliographicCitation
-<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty ;
-                                                 rdfs:range rdfs:Literal .
+dcterms:bibliographicCitation rdf:type owl:AnnotationProperty ;
+                              rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/conformsTo
-<http://purl.org/dc/terms/conformsTo> rdf:type owl:AnnotationProperty ;
-                                      rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+dcterms:conformsTo rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf dcterms:relation .
 
 
 ###  http://purl.org/dc/terms/contributor
-<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+dcterms:contributor rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/coverage
-<http://purl.org/dc/terms/coverage> rdf:type owl:AnnotationProperty .
+dcterms:coverage rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/created
-<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty ;
-                                   rdfs:range rdfs:Literal .
+dcterms:created rdf:type owl:AnnotationProperty ;
+                rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty ;
-                                   rdfs:subPropertyOf <http://purl.org/dc/terms/contributor> .
+dcterms:creator rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf dcterms:contributor .
 
 
 ###  http://purl.org/dc/terms/date
-<http://purl.org/dc/terms/date> rdf:type owl:AnnotationProperty ;
-                                rdfs:range rdfs:Literal .
+dcterms:date rdf:type owl:AnnotationProperty ;
+             rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/dateAccepted
-<http://purl.org/dc/terms/dateAccepted> rdf:type owl:AnnotationProperty ;
-                                        rdfs:range rdfs:Literal .
+dcterms:dateAccepted rdf:type owl:AnnotationProperty ;
+                     rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/dateCopyrighted
-<http://purl.org/dc/terms/dateCopyrighted> rdf:type owl:AnnotationProperty ;
-                                           rdfs:range rdfs:Literal .
+dcterms:dateCopyrighted rdf:type owl:AnnotationProperty ;
+                        rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/dateSubmitted
-<http://purl.org/dc/terms/dateSubmitted> rdf:type owl:AnnotationProperty ;
-                                         rdfs:range rdfs:Literal .
+dcterms:dateSubmitted rdf:type owl:AnnotationProperty ;
+                      rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/description
-<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+dcterms:description rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/educationLevel
-<http://purl.org/dc/terms/educationLevel> rdf:type owl:AnnotationProperty ;
-                                          rdfs:subPropertyOf <http://purl.org/dc/terms/audience> .
+dcterms:educationLevel rdf:type owl:AnnotationProperty ;
+                       rdfs:subPropertyOf dcterms:audience .
 
 
 ###  http://purl.org/dc/terms/extent
-<http://purl.org/dc/terms/extent> rdf:type owl:AnnotationProperty ;
-                                  rdfs:subPropertyOf <http://purl.org/dc/terms/format> .
+dcterms:extent rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf dcterms:format .
 
 
 ###  http://purl.org/dc/terms/format
-<http://purl.org/dc/terms/format> rdf:type owl:AnnotationProperty .
+dcterms:format rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/hasFormat
-<http://purl.org/dc/terms/hasFormat> rdf:type owl:AnnotationProperty ;
-                                     rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+dcterms:hasFormat rdf:type owl:AnnotationProperty ;
+                  rdfs:subPropertyOf dcterms:relation .
 
 
 ###  http://purl.org/dc/terms/hasPart
-<http://purl.org/dc/terms/hasPart> rdf:type owl:AnnotationProperty ;
-                                   rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+dcterms:hasPart rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf dcterms:relation .
 
 
 ###  http://purl.org/dc/terms/hasVersion
-<http://purl.org/dc/terms/hasVersion> rdf:type owl:AnnotationProperty ;
-                                      rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+dcterms:hasVersion rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf dcterms:relation .
 
 
 ###  http://purl.org/dc/terms/identifier
-<http://purl.org/dc/terms/identifier> rdf:type owl:AnnotationProperty ;
-                                      rdfs:range rdfs:Literal .
+dcterms:identifier rdf:type owl:AnnotationProperty ;
+                   rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/isFormatOf
-<http://purl.org/dc/terms/isFormatOf> rdf:type owl:AnnotationProperty ;
-                                      rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+dcterms:isFormatOf rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf dcterms:relation .
 
 
 ###  http://purl.org/dc/terms/isPartOf
-<http://purl.org/dc/terms/isPartOf> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+dcterms:isPartOf rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dcterms:relation .
 
 
 ###  http://purl.org/dc/terms/isReferencedBy
-<http://purl.org/dc/terms/isReferencedBy> rdf:type owl:AnnotationProperty ;
-                                          rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+dcterms:isReferencedBy rdf:type owl:AnnotationProperty ;
+                       rdfs:subPropertyOf dcterms:relation .
 
 
 ###  http://purl.org/dc/terms/isReplacedBy
-<http://purl.org/dc/terms/isReplacedBy> rdf:type owl:AnnotationProperty ;
-                                        rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+dcterms:isReplacedBy rdf:type owl:AnnotationProperty ;
+                     rdfs:subPropertyOf dcterms:relation .
 
 
 ###  http://purl.org/dc/terms/isRequiredBy
-<http://purl.org/dc/terms/isRequiredBy> rdf:type owl:AnnotationProperty ;
-                                        rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+dcterms:isRequiredBy rdf:type owl:AnnotationProperty ;
+                     rdfs:subPropertyOf dcterms:relation .
 
 
 ###  http://purl.org/dc/terms/isVersionOf
-<http://purl.org/dc/terms/isVersionOf> rdf:type owl:AnnotationProperty ;
-                                       rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+dcterms:isVersionOf rdf:type owl:AnnotationProperty ;
+                    rdfs:subPropertyOf dcterms:relation .
 
 
 ###  http://purl.org/dc/terms/issued
-<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty ;
-                                  rdfs:range rdfs:Literal .
+dcterms:issued rdf:type owl:AnnotationProperty ;
+               rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/language
-<http://purl.org/dc/terms/language> rdf:type owl:AnnotationProperty .
+dcterms:language rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty ;
-                                   rdfs:subPropertyOf <http://purl.org/dc/terms/rights> .
+dcterms:license rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf dcterms:rights .
 
 
 ###  http://purl.org/dc/terms/mediator
-<http://purl.org/dc/terms/mediator> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/terms/audience> .
+dcterms:mediator rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dcterms:audience .
 
 
 ###  http://purl.org/dc/terms/medium
-<http://purl.org/dc/terms/medium> rdf:type owl:AnnotationProperty ;
-                                  rdfs:subPropertyOf <http://purl.org/dc/terms/format> .
+dcterms:medium rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf dcterms:format .
 
 
 ###  http://purl.org/dc/terms/modified
-<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty ;
-                                    rdfs:range rdfs:Literal .
+dcterms:modified rdf:type owl:AnnotationProperty ;
+                 rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/publisher
-<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+dcterms:publisher rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/references
-<http://purl.org/dc/terms/references> rdf:type owl:AnnotationProperty ;
-                                      rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+dcterms:references rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf dcterms:relation .
 
 
 ###  http://purl.org/dc/terms/relation
-<http://purl.org/dc/terms/relation> rdf:type owl:AnnotationProperty .
+dcterms:relation rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/replaces
-<http://purl.org/dc/terms/replaces> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+dcterms:replaces rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dcterms:relation .
 
 
 ###  http://purl.org/dc/terms/requires
-<http://purl.org/dc/terms/requires> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+dcterms:requires rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dcterms:relation .
 
 
 ###  http://purl.org/dc/terms/rights
-<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
+dcterms:rights rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/source
-<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty ;
-                                  rdfs:subPropertyOf <http://purl.org/dc/terms/relation> .
+dcterms:source rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf dcterms:relation .
 
 
 ###  http://purl.org/dc/terms/spatial
-<http://purl.org/dc/terms/spatial> rdf:type owl:AnnotationProperty ;
-                                   rdfs:subPropertyOf <http://purl.org/dc/terms/coverage> .
+dcterms:spatial rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf dcterms:coverage .
 
 
 ###  http://purl.org/dc/terms/subject
-<http://purl.org/dc/terms/subject> rdf:type owl:AnnotationProperty .
+dcterms:subject rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/tableOfContents
-<http://purl.org/dc/terms/tableOfContents> rdf:type owl:AnnotationProperty ;
-                                           rdfs:subPropertyOf <http://purl.org/dc/terms/description> .
+dcterms:tableOfContents rdf:type owl:AnnotationProperty ;
+                        rdfs:subPropertyOf dcterms:description .
 
 
 ###  http://purl.org/dc/terms/temporal
-<http://purl.org/dc/terms/temporal> rdf:type owl:AnnotationProperty ;
-                                    rdfs:subPropertyOf <http://purl.org/dc/terms/coverage> .
+dcterms:temporal rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf dcterms:coverage .
 
 
 ###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty ;
-                                 rdfs:range rdfs:Literal .
+dcterms:title rdf:type owl:AnnotationProperty ;
+              rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/type
-<http://purl.org/dc/terms/type> rdf:type owl:AnnotationProperty .
+dcterms:type rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/valid
-<http://purl.org/dc/terms/valid> rdf:type owl:AnnotationProperty ;
-                                 rdfs:range rdfs:Literal .
+dcterms:valid rdf:type owl:AnnotationProperty ;
+              rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/pav/authoredBy
@@ -355,92 +373,92 @@ owl:versionInfo rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
-<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty ;
-                                               rdfs:comment "The range of skos:altLabel is the class of RDF plain literals."@en ,
-                                                            "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
-                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                               rdfs:label "alternative label"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> "An alternative lexical label for a resource."@en ;
-                                               <http://www.w3.org/2004/02/skos/core#example> "Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel)."@en ;
-                                               rdfs:subPropertyOf rdfs:label .
+skos:altLabel rdf:type owl:AnnotationProperty ;
+              rdfs:comment "The range of skos:altLabel is the class of RDF plain literals."@en ,
+                           "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+              rdfs:label "alternative label"@en ;
+              skos:definition "An alternative lexical label for a resource."@en ;
+              skos:example "Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel)."@en ;
+              rdfs:subPropertyOf rdfs:label .
 
 
 ###  http://www.w3.org/2004/02/skos/core#changeNote
-<http://www.w3.org/2004/02/skos/core#changeNote> rdf:type owl:AnnotationProperty ;
-                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                 rdfs:label "change note"@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#definition> "A note about a modification to a concept."@en ;
-                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+skos:changeNote rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                rdfs:label "change note"@en ;
+                skos:definition "A note about a modification to a concept."@en ;
+                rdfs:subPropertyOf skos:note .
 
 
 ###  http://www.w3.org/2004/02/skos/core#definition
-<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty ;
-                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                 rdfs:label "definition"@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#definition> "A statement or formal explanation of the meaning of a concept."@en ;
-                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+skos:definition rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                rdfs:label "definition"@en ;
+                skos:definition "A statement or formal explanation of the meaning of a concept."@en ;
+                rdfs:subPropertyOf skos:note .
 
 
 ###  http://www.w3.org/2004/02/skos/core#editorialNote
-<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty ;
-                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                    rdfs:label "editorial note"@en ;
-                                                    <http://www.w3.org/2004/02/skos/core#definition> "A note for an editor, translator or maintainer of the vocabulary."@en ;
-                                                    rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+skos:editorialNote rdf:type owl:AnnotationProperty ;
+                   rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                   rdfs:label "editorial note"@en ;
+                   skos:definition "A note for an editor, translator or maintainer of the vocabulary."@en ;
+                   rdfs:subPropertyOf skos:note .
 
 
 ###  http://www.w3.org/2004/02/skos/core#example
-<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty ;
-                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                              rdfs:label "example"@en ;
-                                              <http://www.w3.org/2004/02/skos/core#definition> "An example of the use of a concept."@en ;
-                                              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+skos:example rdf:type owl:AnnotationProperty ;
+             rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+             rdfs:label "example"@en ;
+             skos:definition "An example of the use of a concept."@en ;
+             rdfs:subPropertyOf skos:note .
 
 
 ###  http://www.w3.org/2004/02/skos/core#hiddenLabel
-<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdf:type owl:AnnotationProperty ;
-                                                  rdfs:comment "The range of skos:hiddenLabel is the class of RDF plain literals."@en ,
-                                                               "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
-                                                  rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                  rdfs:label "hidden label"@en ;
-                                                  <http://www.w3.org/2004/02/skos/core#definition> "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en ;
-                                                  rdfs:subPropertyOf rdfs:label .
+skos:hiddenLabel rdf:type owl:AnnotationProperty ;
+                 rdfs:comment "The range of skos:hiddenLabel is the class of RDF plain literals."@en ,
+                              "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                 rdfs:label "hidden label"@en ;
+                 skos:definition "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en ;
+                 rdfs:subPropertyOf rdfs:label .
 
 
 ###  http://www.w3.org/2004/02/skos/core#historyNote
-<http://www.w3.org/2004/02/skos/core#historyNote> rdf:type owl:AnnotationProperty ;
-                                                  rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                  rdfs:label "history note"@en ;
-                                                  <http://www.w3.org/2004/02/skos/core#definition> "A note about the past state/use/meaning of a concept."@en ;
-                                                  rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+skos:historyNote rdf:type owl:AnnotationProperty ;
+                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                 rdfs:label "history note"@en ;
+                 skos:definition "A note about the past state/use/meaning of a concept."@en ;
+                 rdfs:subPropertyOf skos:note .
 
 
 ###  http://www.w3.org/2004/02/skos/core#note
-<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty ;
-                                           rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                           rdfs:label "note"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A general note, for any purpose."@en ;
-                                           <http://www.w3.org/2004/02/skos/core#scopeNote> "This property may be used directly, or as a super-property for more specific note types."@en .
+skos:note rdf:type owl:AnnotationProperty ;
+          rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+          rdfs:label "note"@en ;
+          skos:definition "A general note, for any purpose."@en ;
+          skos:scopeNote "This property may be used directly, or as a super-property for more specific note types."@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
-<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty ;
-                                                rdfs:comment "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag."@en ,
-                                                             "The range of skos:prefLabel is the class of RDF plain literals."@en ,
-                                                             """skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
+skos:prefLabel rdf:type owl:AnnotationProperty ;
+               rdfs:comment "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag."@en ,
+                            "The range of skos:prefLabel is the class of RDF plain literals."@en ,
+                            """skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
       disjoint properties."""@en ;
-                                                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                rdfs:label "preferred label"@en ;
-                                                <http://www.w3.org/2004/02/skos/core#definition> "The preferred lexical label for a resource, in a given language."@en ;
-                                                rdfs:subPropertyOf rdfs:label .
+               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+               rdfs:label "preferred label"@en ;
+               skos:definition "The preferred lexical label for a resource, in a given language."@en ;
+               rdfs:subPropertyOf rdfs:label .
 
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
-<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty ;
-                                                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                rdfs:label "scope note"@en ;
-                                                <http://www.w3.org/2004/02/skos/core#definition> "A note that helps to clarify the meaning and/or the use of a concept."@en ;
-                                                rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+skos:scopeNote rdf:type owl:AnnotationProperty ;
+               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+               rdfs:label "scope note"@en ;
+               skos:definition "A note that helps to clarify the meaning and/or the use of a concept."@en ;
+               rdfs:subPropertyOf skos:note .
 
 
 ###  http://www.w3.org/ns/dcat#accessURL
@@ -561,7 +579,7 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
 
 
 ###  http://xmlns.com/foaf/0.1/homepage
-<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
+foaf:homepage rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/funding
@@ -597,51 +615,51 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
 #################################################################
 
 ###  http://purl.org/dc/terms/Box
-<http://purl.org/dc/terms/Box> rdf:type rdfs:Datatype .
+dcterms:Box rdf:type rdfs:Datatype .
 
 
 ###  http://purl.org/dc/terms/ISO3166
-<http://purl.org/dc/terms/ISO3166> rdf:type rdfs:Datatype .
+dcterms:ISO3166 rdf:type rdfs:Datatype .
 
 
 ###  http://purl.org/dc/terms/ISO639-2
-<http://purl.org/dc/terms/ISO639-2> rdf:type rdfs:Datatype .
+dcterms:ISO639-2 rdf:type rdfs:Datatype .
 
 
 ###  http://purl.org/dc/terms/ISO639-3
-<http://purl.org/dc/terms/ISO639-3> rdf:type rdfs:Datatype .
+dcterms:ISO639-3 rdf:type rdfs:Datatype .
 
 
 ###  http://purl.org/dc/terms/Period
-<http://purl.org/dc/terms/Period> rdf:type rdfs:Datatype .
+dcterms:Period rdf:type rdfs:Datatype .
 
 
 ###  http://purl.org/dc/terms/Point
-<http://purl.org/dc/terms/Point> rdf:type rdfs:Datatype .
+dcterms:Point rdf:type rdfs:Datatype .
 
 
 ###  http://purl.org/dc/terms/RFC1766
-<http://purl.org/dc/terms/RFC1766> rdf:type rdfs:Datatype .
+dcterms:RFC1766 rdf:type rdfs:Datatype .
 
 
 ###  http://purl.org/dc/terms/RFC3066
-<http://purl.org/dc/terms/RFC3066> rdf:type rdfs:Datatype .
+dcterms:RFC3066 rdf:type rdfs:Datatype .
 
 
 ###  http://purl.org/dc/terms/RFC4646
-<http://purl.org/dc/terms/RFC4646> rdf:type rdfs:Datatype .
+dcterms:RFC4646 rdf:type rdfs:Datatype .
 
 
 ###  http://purl.org/dc/terms/RFC5646
-<http://purl.org/dc/terms/RFC5646> rdf:type rdfs:Datatype .
+dcterms:RFC5646 rdf:type rdfs:Datatype .
 
 
 ###  http://purl.org/dc/terms/URI
-<http://purl.org/dc/terms/URI> rdf:type rdfs:Datatype .
+dcterms:URI rdf:type rdfs:Datatype .
 
 
 ###  http://purl.org/dc/terms/W3CDTF
-<http://purl.org/dc/terms/W3CDTF> rdf:type rdfs:Datatype .
+dcterms:W3CDTF rdf:type rdfs:Datatype .
 
 
 ###  http://www.w3.org/2001/XMLSchema#date
@@ -685,10 +703,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                    ] ;
                                        rdfs:range <http://www.w3.org/ns/prov#Location> ;
                                        rdfs:comment "The Location of any resource."@en ,
-                                                    "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>." ;
+                                                    "enThis property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>." ;
                                        rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                        rdfs:label "atLocation" ;
-                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "at location"@en ;
+                                       skos:prefLabel "at location"@en ;
                                        <http://www.w3.org/ns/prov#category> "expanded" ;
                                        <http://www.w3.org/ns/prov#editorialNote> "The naming of prov:atLocation parallels prov:atTime, and is not named prov:hadLocation to avoid conflicting with the convention that prov:had* properties are used on prov:Influence classes."@en ,
                                                                                  "This property is not functional because the many values could be at a variety of granularies (In this building, in this room, in that chair)."@en ;
@@ -715,7 +733,7 @@ xsd:date rdf:type rdfs:Datatype .
                                     rdfs:comment "The _optional_ Plan adopted by an Agent in Association with some Activity. Plan specifications are out of the scope of this specification."@en ;
                                     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                     rdfs:label "hadPlan" ;
-                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "has plan"@en ;
+                                    skos:prefLabel "has plan"@en ;
                                     <http://www.w3.org/ns/prov#category> "qualified" ;
                                     <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
                                     <http://www.w3.org/ns/prov#inverse> "wasPlanOf" ;
@@ -729,7 +747,7 @@ xsd:date rdf:type rdfs:Datatype .
                                              rdfs:range <http://www.w3.org/ns/prov#Entity> ;
                                              rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                              rdfs:label "hadPrimarySource" ;
-                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "had primary source"@en ;
+                                             skos:prefLabel "had primary source"@en ;
                                              <http://www.w3.org/ns/prov#category> "expanded" ;
                                              <http://www.w3.org/ns/prov#component> "derivations" ;
                                              <http://www.w3.org/ns/prov#inverse> "wasPrimarySourceOf" .
@@ -746,7 +764,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://www.w3.org/ns/prov#hadRole> rdf:type owl:ObjectProperty ;
                                     rdfs:range <http://www.w3.org/ns/prov#Role> ;
                                     rdfs:comment "The _optional_ Role that an Entity assumed in the context of an Activity. For example, :baking prov:used :spoon; prov:qualified [ a prov:Usage; prov:entity :spoon; prov:hadRole roles:mixing_implement ]."@en ,
-                                                 "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>." ;
+                                                 "enThis property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>." ;
                                     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                     rdfs:label "hadRole" ;
                                     <http://www.w3.org/ns/prov#category> "qualified" ;
@@ -771,10 +789,10 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/ns/prov#qualifiedAssociation
 <http://www.w3.org/ns/prov#qualifiedAssociation> rdf:type owl:ObjectProperty ;
-                                                 <http://purl.org/dc/terms/description> "A relation from an activity to an association qualifying the involvement of an agent in the activity." ;
+                                                 dcterms:description "A relation from an activity to an association qualifying the involvement of an agent in the activity." ;
                                                  rdfs:comment "If this Activity prov:wasAssociatedWith Agent :ag, then it can qualify the Association using prov:qualifiedAssociation [ a prov:Association;  prov:agent :ag; :foo :bar ]." ;
                                                  rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
-                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "qualified association"@en .
+                                                 skos:prefLabel "qualified association"@en .
 
 
 ###  http://www.w3.org/ns/prov#specializationOf
@@ -813,7 +831,7 @@ xsd:date rdf:type rdfs:Datatype .
                                               rdfs:comment "An prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity."@en ;
                                               rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                               rdfs:label "wasAssociatedWith" ;
-                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "was associated with"@en ;
+                                              skos:prefLabel "was associated with"@en ;
                                               <http://www.w3.org/ns/prov#category> "starting-point" ;
                                               <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
                                               <http://www.w3.org/ns/prov#inverse> "wasAssociateFor" .
@@ -826,7 +844,7 @@ xsd:date rdf:type rdfs:Datatype .
                                            rdfs:comment "The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable."@en ;
                                            rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                            rdfs:label "wasDerivedFrom" ;
-                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "was derived from" ;
+                                           skos:prefLabel "was derived from" ;
                                            <http://www.w3.org/ns/prov#category> "starting-point" ;
                                            <http://www.w3.org/ns/prov#component> "derivations" ;
                                            <http://www.w3.org/ns/prov#definition> "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."@en ;
@@ -840,7 +858,7 @@ xsd:date rdf:type rdfs:Datatype .
                                        rdfs:comment "End is when an activity is deemed to have ended. An end may refer to an entity, known as trigger, that terminated the activity."@en ;
                                        rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                        rdfs:label "wasEndedBy" ;
-                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "was ended by"@en ;
+                                       skos:prefLabel "was ended by"@en ;
                                        <http://www.w3.org/ns/prov#category> "expanded" ;
                                        <http://www.w3.org/ns/prov#component> "entities-activities" ;
                                        <http://www.w3.org/ns/prov#inverse> "ended" .
@@ -852,7 +870,7 @@ xsd:date rdf:type rdfs:Datatype .
                                            rdfs:range <http://www.w3.org/ns/prov#Activity> ;
                                            rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                            rdfs:label "wasGeneratedBy" ;
-                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "was generated by"@en ;
+                                           skos:prefLabel "was generated by"@en ;
                                            <http://www.w3.org/ns/prov#category> "starting-point" ;
                                            <http://www.w3.org/ns/prov#component> "entities-activities" ;
                                            <http://www.w3.org/ns/prov#inverse> "generated" .
@@ -864,7 +882,7 @@ xsd:date rdf:type rdfs:Datatype .
                                              rdfs:range <http://www.w3.org/ns/prov#Activity> ;
                                              rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                              rdfs:label "wasInvalidatedBy" ;
-                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "was invalidated by"@en ;
+                                             skos:prefLabel "was invalidated by"@en ;
                                              <http://www.w3.org/ns/prov#category> "expanded" ;
                                              <http://www.w3.org/ns/prov#component> "entities-activities" ;
                                              <http://www.w3.org/ns/prov#inverse> "invalidated" .
@@ -878,7 +896,7 @@ xsd:date rdf:type rdfs:Datatype .
                                           rdfs:comment "An entity is derived from an original entity by copying, or 'quoting', some or all of it."@en ;
                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                           rdfs:label "wasQuotedFrom" ;
-                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "was quoted from"@en ;
+                                          skos:prefLabel "was quoted from"@en ;
                                           <http://www.w3.org/ns/prov#category> "expanded" ;
                                           <http://www.w3.org/ns/prov#component> "derivations" ;
                                           <http://www.w3.org/ns/prov#inverse> "quotedAs" .
@@ -899,7 +917,7 @@ xsd:date rdf:type rdfs:Datatype .
                                           rdfs:comment "A revision is a derivation that revises an entity into a revised version."@en ;
                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                           rdfs:label "wasRevisionOf" ;
-                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "was revision of"@en ;
+                                          skos:prefLabel "was revision of"@en ;
                                           <http://www.w3.org/ns/prov#category> "expanded" ;
                                           <http://www.w3.org/ns/prov#component> "derivations" ;
                                           <http://www.w3.org/ns/prov#inverse> "hadRevision" .
@@ -920,7 +938,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
                                          rdfs:comment "Start is when an activity is deemed to have started. A start may refer to an entity, known as trigger, that initiated the activity."@en ;
                                          rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                          rdfs:label "wasStartedBy" ;
-                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "was started by"@en ;
+                                         skos:prefLabel "was started by"@en ;
                                          <http://www.w3.org/ns/prov#category> "expanded" ;
                                          <http://www.w3.org/ns/prov#component> "entities-activities" ;
                                          <http://www.w3.org/ns/prov#inverse> "started" .
@@ -931,7 +949,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
                                owl:inverseOf <https://w3id.org/sulo/isTimeOf> ;
                                rdfs:domain owl:Thing ;
                                rdfs:range <https://w3id.org/sulo/Time> ;
-                               <http://purl.org/dc/terms/alternative> "existsAt"@en ;
+                               dcterms:alternative "existsAt"@en ;
                                rdfs:comment "a relation between any thing and the time in which it occurs at."@en ;
                                rdfs:label "at time"@en .
 
@@ -978,8 +996,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 <https://w3id.org/sulo/hasPart> rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf <https://w3id.org/sulo/contains> ;
                                 owl:inverseOf <https://w3id.org/sulo/isPartOf> ;
-                                rdf:type owl:TransitiveProperty ,
-                                         owl:ReflexiveProperty ;
+                                rdf:type owl:TransitiveProperty ;
                                 rdfs:comment "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part." ;
                                 rdfs:label "has part"@en .
 
@@ -1036,8 +1053,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 ###  https://w3id.org/sulo/isPartOf
 <https://w3id.org/sulo/isPartOf> rdf:type owl:ObjectProperty ;
                                  rdfs:subPropertyOf <https://w3id.org/sulo/isIn> ;
-                                 rdf:type owl:TransitiveProperty ,
-                                          owl:ReflexiveProperty ;
+                                 rdf:type owl:TransitiveProperty ;
                                  rdfs:comment "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole."@en ;
                                  rdfs:label "is part of"@en .
 
@@ -1098,30 +1114,34 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
               owl:inverseOf :geo_is_contained_in ;
               rdfs:domain <https://w3id.org/sulo/SpatialObject> ;
               rdfs:range <https://w3id.org/sulo/SpatialObject> ;
-              <http://purl.org/dc/terms/created> "2026-07-20T22:30:29Z"^^xsd:dateTime ;
-              <http://purl.org/dc/terms/creator> "Michael DeBellis" ;
+              dcterms:created "2026-07-20T22:30:29Z"^^xsd:dateTime ;
+              dcterms:creator "Michael DeBellis" ;
+              rdfs:label "geo contains" ;
               <http://www.w3.org/ns/prov#definition> "Added geo_contains and geo_is_contained_in to model containment in sulo:Spatial_Object MD 7/20/26"@en .
 
 
 ###  https://www.michaeldebellis.com/bro_place/geo_contains_transitive
 :geo_contains_transitive rdf:type owl:ObjectProperty ,
                                   owl:TransitiveProperty ;
-                         <http://purl.org/dc/terms/created> "2026-07-20T22:32:27Z"^^xsd:dateTime ;
-                         <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+                         dcterms:created "2026-07-20T22:32:27Z"^^xsd:dateTime ;
+                         dcterms:creator "Michael DeBellis" ;
+                         rdfs:label "geo contains transitive" .
 
 
 ###  https://www.michaeldebellis.com/bro_place/geo_is_contained_in
 :geo_is_contained_in rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :geo_is_contained_in_transitive ;
-                     <http://purl.org/dc/terms/created> "2026-07-20T22:31:39Z"^^xsd:dateTime ;
-                     <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+                     dcterms:created "2026-07-20T22:31:39Z"^^xsd:dateTime ;
+                     dcterms:creator "Michael DeBellis" ;
+                     rdfs:label "geo is contained in" .
 
 
 ###  https://www.michaeldebellis.com/bro_place/geo_is_contained_in_transitive
 :geo_is_contained_in_transitive rdf:type owl:ObjectProperty ,
                                          owl:TransitiveProperty ;
-                                <http://purl.org/dc/terms/created> "2026-07-20T22:33:13Z"^^xsd:dateTime ;
-                                <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+                                dcterms:created "2026-07-20T22:33:13Z"^^xsd:dateTime ;
+                                dcterms:creator "Michael DeBellis" ;
+                                rdfs:label "geo is contained in transitive" .
 
 
 #################################################################
@@ -1206,7 +1226,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
                                   <http://www.w3.org/ns/prov#definition> "Provides a value that is a direct representation of an entity."@en ;
                                   <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-attribute-value"^^xsd:anyURI ;
                                   <http://www.w3.org/ns/prov#editorialNote> "This property serves the same purpose as rdf:value, but has been reintroduced to avoid some of the definitional ambiguity in the RDF specification (specifically, 'may be used in describing structured values')."@en ,
-                                                                            "The editor's definition comes from http://www.w3.org/TR/rdf-primer/#rdfvalue" .
+                                                                            "enThe editor's definition comes from http://www.w3.org/TR/rdf-primer/#rdfvalue" .
 
 
 ###  https://w3id.org/sulo/hasValue
@@ -1276,7 +1296,7 @@ owl:Thing rdf:type owl:Class .
                                                rdfs:comment "An instantaneous event, or event for short, happens in the world and marks a change in the world, in its activities and in its entities. The term 'event' is commonly used in process algebra with a similar meaning. Events represent communications or interactions; they are assumed to be atomic and instantaneous."@en ;
                                                rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
                                                rdfs:label "InstantaneousEvent" ;
-                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Instantaneous Event"@en ;
+                                               skos:prefLabel "Instantaneous Event"@en ;
                                                <http://www.w3.org/ns/prov#category> "qualified" ;
                                                <http://www.w3.org/ns/prov#component> "entities-activities" ;
                                                <http://www.w3.org/ns/prov#constraints> "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#dfn-event"^^xsd:anyURI ;
@@ -1362,8 +1382,8 @@ owl:Thing rdf:type owl:Class .
                                    rdfs:subClassOf <https://w3id.org/sulo/Feature> ;
                                    rdfs:comment "A capability is a feature that describes what an entity is able to do, under some set of circumstances."@en ;
                                    rdfs:label "capability" ;
-                                   <http://www.w3.org/2004/02/skos/core#example> "the capability to fly, the capabilty to reduce the activation energy of a chemical reaction, the capability to reason"@en ;
-                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Capability"@en .
+                                   skos:example "the capability to fly, the capabilty to reduce the activation energy of a chemical reaction, the capability to reason"@en ;
+                                   skos:prefLabel "Capability"@en .
 
 
 ###  https://w3id.org/sulo/Collection
@@ -1376,9 +1396,9 @@ owl:Thing rdf:type owl:Class .
                                    owl:disjointWith <https://w3id.org/sulo/Quantity> ;
                                    rdfs:comment "A collection is an information object for which there may be zero or more items."@en ;
                                    rdfs:label "collection"@en ;
-                                   <http://www.w3.org/2004/02/skos/core#example> "a stamp collection, a murder of crows, the arm of a clinical trial"@en ;
-                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Collection"@en ;
-                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "An information object that aggregates or organizes other information objects. This class is not intended as a general superclass for social groups, physical aggregates, organizations, or arbitrary mathematical sets. MD 7/15/26"@en .
+                                   skos:example "a stamp collection, a murder of crows, the arm of a clinical trial"@en ;
+                                   skos:prefLabel "Collection"@en ;
+                                   skos:scopeNote "An information object that aggregates or organizes other information objects. This class is not intended as a general superclass for social groups, physical aggregates, organizations, or arbitrary mathematical sets. MD 7/15/26"@en .
 
 
 ###  https://w3id.org/sulo/Duration
@@ -1395,7 +1415,7 @@ owl:Thing rdf:type owl:Class .
                                                  ] ;
                                  rdfs:comment "Duration is a temporal quantity that represents the extent or (non-negative) amount of time that elapses between two temporal points, typically the start and end of a time interval."@en ;
                                  rdfs:label "duration"@en ;
-                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Duration"@en .
+                                 skos:prefLabel "Duration"@en .
 
 
 ###  https://w3id.org/sulo/EndTime
@@ -1404,7 +1424,7 @@ owl:Thing rdf:type owl:Class .
                                 owl:disjointWith <https://w3id.org/sulo/StartTime> ;
                                 rdfs:comment "an end time is a time instant at the end of a process/time interval."@en ;
                                 rdfs:label "end time"@en ;
-                                <http://www.w3.org/2004/02/skos/core#prefLabel> "End Time"@en .
+                                skos:prefLabel "End Time"@en .
 
 
 ###  https://w3id.org/sulo/Feature
@@ -1430,8 +1450,8 @@ owl:Thing rdf:type owl:Class .
                                                     ) ;
                                 rdfs:comment "A feature is any characteristic that stems from the intrisinc structure and/or context"@en ;
                                 rdfs:label "feature"@en ;
-                                <http://www.w3.org/2004/02/skos/core#example> "the capability to fly, a collection of cards, a measured height of 170cm."@en ;
-                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Feature"@en .
+                                skos:example "the capability to fly, a collection of cards, a measured height of 170cm."@en ;
+                                skos:prefLabel "Feature"@en .
 
 
 ###  https://w3id.org/sulo/InformationObject
@@ -1447,7 +1467,7 @@ owl:Thing rdf:type owl:Class .
                                                           ] ;
                                           rdfs:comment "an information object is a feature that represents, is about, or encodes some information."@en ;
                                           rdfs:label "information object"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Information Object"@en .
+                                          skos:prefLabel "Information Object"@en .
 
 
 ###  https://w3id.org/sulo/Object
@@ -1465,8 +1485,8 @@ owl:Thing rdf:type owl:Class .
                                owl:disjointWith <https://w3id.org/sulo/Process> ;
                                rdfs:comment "An object is an entity that maintains its identity through time, and does not have processes as its parts." ;
                                rdfs:label "object"@en ;
-                               <http://www.w3.org/2004/02/skos/core#example> "a heart, the function to pump blood, the role of a doctor"@en ;
-                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Object"@en .
+                               skos:example "a heart, the function to pump blood, the role of a doctor"@en ;
+                               skos:prefLabel "Object"@en .
 
 
 ###  https://w3id.org/sulo/Process
@@ -1477,8 +1497,8 @@ owl:Thing rdf:type owl:Class .
                                                 ] ;
                                 rdfs:comment "a process is a entity that unfolds in time, has temporal parts, and has objects that participate in the process."@en ;
                                 rdfs:label "process"@en ;
-                                <http://www.w3.org/2004/02/skos/core#example> "the process of diagnosing a problem condition, the process of walking down the street, the process of teaching a class"@en ;
-                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Process"@en .
+                                skos:example "the process of diagnosing a problem condition, the process of walking down the street, the process of teaching a class"@en ;
+                                skos:prefLabel "Process"@en .
 
 
 ###  https://w3id.org/sulo/Quality
@@ -1487,7 +1507,7 @@ owl:Thing rdf:type owl:Class .
                                 rdfs:comment "A quality is a feature that is intrinsically associated with its bearer (or its parts)."@en ,
                                              "the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event"@en ;
                                 rdfs:label "quality"@en ;
-                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Quality"@en .
+                                skos:prefLabel "Quality"@en .
 
 
 ###  https://w3id.org/sulo/Quantity
@@ -1499,7 +1519,7 @@ owl:Thing rdf:type owl:Class .
                                                  ] ;
                                  rdfs:comment "A quantity is an information object that represents the magnitude (and unit) of an object or process."@en ;
                                  rdfs:label "quantity"@en ;
-                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Quantity"@en .
+                                 skos:prefLabel "Quantity"@en .
 
 
 ###  https://w3id.org/sulo/Role
@@ -1507,8 +1527,8 @@ owl:Thing rdf:type owl:Class .
                              rdfs:subClassOf <https://w3id.org/sulo/Feature> ;
                              rdfs:comment "A role is a feature that describes a context-dependent behaviour."@en ;
                              rdfs:label "role"@en ;
-                             <http://www.w3.org/2004/02/skos/core#example> "a teacher, a student, a catalyst, a substrate, a product, a patient"@en ;
-                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Role"@en .
+                             skos:example "a teacher, a student, a catalyst, a substrate, a product, a patient"@en ;
+                             skos:prefLabel "Role"@en .
 
 
 ###  https://w3id.org/sulo/SpatialObject
@@ -1520,8 +1540,8 @@ owl:Thing rdf:type owl:Class .
                                                       ] ;
                                       rdfs:comment "A spatial object is an object that occupies space"@en ;
                                       rdfs:label "spatial object"@en ;
-                                      <http://www.w3.org/2004/02/skos/core#example> "a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth"@en ;
-                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Spatial Object"@en .
+                                      skos:example "a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth"@en ;
+                                      skos:prefLabel "Spatial Object"@en .
 
 
 ###  https://w3id.org/sulo/StartTime
@@ -1529,7 +1549,7 @@ owl:Thing rdf:type owl:Class .
                                   rdfs:subClassOf <https://w3id.org/sulo/TimeInstant> ;
                                   rdfs:comment "a start time is a time instant at the beginning of a process/time interval."@en ;
                                   rdfs:label "start time"@en ;
-                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Start Time"@en .
+                                  skos:prefLabel "Start Time"@en .
 
 
 ###  https://w3id.org/sulo/Time
@@ -1542,7 +1562,7 @@ owl:Thing rdf:type owl:Class .
                                                  ) ;
                              rdfs:comment "time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference)."@en ;
                              rdfs:label "time"@en ;
-                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Time"@en .
+                             skos:prefLabel "Time"@en .
 
 
 ###  https://w3id.org/sulo/TimeInstant
@@ -1558,7 +1578,7 @@ owl:Thing rdf:type owl:Class .
                                                     ] ;
                                     rdfs:comment "time instant is a quantity of time a particular moment in time."@en ;
                                     rdfs:label "time instant"@en ;
-                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Time Instant"@en .
+                                    skos:prefLabel "Time Instant"@en .
 
 
 ###  https://w3id.org/sulo/TimeInterval
@@ -1582,7 +1602,7 @@ owl:Thing rdf:type owl:Class .
                                                      ] ;
                                      rdfs:comment "A time interval is a quantity for a continuous and bounded extent of time, characterized by a start time and an end time."@en ;
                                      rdfs:label "time interval" ;
-                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Time Interval"@en .
+                                     skos:prefLabel "Time Interval"@en .
 
 
 ###  https://w3id.org/sulo/Unit
@@ -1590,49 +1610,55 @@ owl:Thing rdf:type owl:Class .
                              rdfs:subClassOf <https://w3id.org/sulo/Quantity> ;
                              rdfs:comment "a unit is a standardized quantity that is used as a reference for a particular quantity."@en ;
                              rdfs:label "unit" ;
-                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Unit"@en .
+                             skos:prefLabel "Unit"@en .
 
 
 ###  https://www.michaeldebellis.com/bro_place/City
 :City rdf:type owl:Class ;
       rdfs:subClassOf <http://www.w3.org/ns/prov#Location> ;
-      <http://purl.org/dc/terms/created> "2026-07-20T22:27:46Z"^^xsd:dateTime ;
-      <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+      dcterms:created "2026-07-20T22:27:46Z"^^xsd:dateTime ;
+      dcterms:creator "Michael DeBellis" ;
+      rdfs:label "City" .
 
 
 ###  https://www.michaeldebellis.com/bro_place/Continent
 :Continent rdf:type owl:Class ;
            rdfs:subClassOf <http://www.w3.org/ns/prov#Location> ;
-           <http://purl.org/dc/terms/created> "2026-07-20T22:27:46Z"^^xsd:dateTime ;
-           <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+           dcterms:created "2026-07-20T22:27:46Z"^^xsd:dateTime ;
+           dcterms:creator "Michael DeBellis" ;
+           rdfs:label "Continent" .
 
 
 ###  https://www.michaeldebellis.com/bro_place/District
 :District rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/ns/prov#Location> ;
-          <http://purl.org/dc/terms/created> "2026-07-20T22:27:46Z"^^xsd:dateTime ;
-          <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+          dcterms:created "2026-07-20T22:27:46Z"^^xsd:dateTime ;
+          dcterms:creator "Michael DeBellis" ;
+          rdfs:label "District" .
 
 
 ###  https://www.michaeldebellis.com/bro_place/Nation
 :Nation rdf:type owl:Class ;
         rdfs:subClassOf <http://www.w3.org/ns/prov#Location> ;
-        <http://purl.org/dc/terms/created> "2026-07-20T22:27:46Z"^^xsd:dateTime ;
-        <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+        dcterms:created "2026-07-20T22:27:46Z"^^xsd:dateTime ;
+        dcterms:creator "Michael DeBellis" ;
+        rdfs:label "Nation" .
 
 
 ###  https://www.michaeldebellis.com/bro_place/Province
 :Province rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/ns/prov#Location> ;
-          <http://purl.org/dc/terms/created> "2026-07-20T22:27:46Z"^^xsd:dateTime ;
-          <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+          dcterms:created "2026-07-20T22:27:46Z"^^xsd:dateTime ;
+          dcterms:creator "Michael DeBellis" ;
+          rdfs:label "Province" .
 
 
 ###  https://www.michaeldebellis.com/bro_place/State
 :State rdf:type owl:Class ;
        rdfs:subClassOf <http://www.w3.org/ns/prov#Location> ;
-       <http://purl.org/dc/terms/created> "2026-07-20T22:27:46Z"^^xsd:dateTime ;
-       <http://purl.org/dc/terms/creator> "Michael DeBellis" .
+       dcterms:created "2026-07-20T22:27:46Z"^^xsd:dateTime ;
+       dcterms:creator "Michael DeBellis" ;
+       rdfs:label "State" .
 
 
 #################################################################
@@ -1655,6 +1681,336 @@ owl:Thing rdf:type owl:Class .
 <https://www.michaeldebellis.com/prov_lite> rdf:type owl:NamedIndividual ;
                                             <http://www.w3.org/ns/prov#specializationOf> <http://www.w3.org/ns/prov-o> ;
                                             <http://www.w3.org/ns/prov#wasRevisionOf> <http://www.w3.org/ns/prov-o-20130312> .
+
+
+###  https://www.michaeldebellis.com/bro_place/Africa
+:Africa rdf:type owl:NamedIndividual ,
+                 :Continent ;
+        rdfs:label "Africa"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Albany
+:Albany rdf:type owl:NamedIndividual ,
+                 :City ;
+        rdfs:label "Albany"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Antarctica
+:Antarctica rdf:type owl:NamedIndividual ,
+                     :Continent ;
+            rdfs:label "Antarctica"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Asia
+:Asia rdf:type owl:NamedIndividual ,
+               :Continent ;
+      :geo_contains :China ,
+                    :India ,
+                    :Japan ,
+                    :Russia ;
+      rdfs:label "Asia"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Austin
+:Austin rdf:type owl:NamedIndividual ,
+                 :City ;
+        rdfs:label "Austin"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Australia
+:Australia rdf:type owl:NamedIndividual ,
+                    :Nation ;
+           :geo_contains :Melbourne ;
+           rdfs:label "Australia"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Australia_Continent
+:Australia_Continent rdf:type owl:NamedIndividual ,
+                              :Continent ;
+                     :geo_contains :Australia ;
+                     rdfs:label "Australia"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Beijing
+:Beijing rdf:type owl:NamedIndividual ,
+                  :City ;
+         rdfs:label "Beijing"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/British_Columbia
+:British_Columbia rdf:type owl:NamedIndividual ,
+                           :Province ;
+                  :geo_contains :Vancouver ;
+                  rdfs:label "British Columbia"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/California
+:California rdf:type owl:NamedIndividual ,
+                     :State ;
+            :geo_contains :Los_Angeles ,
+                          :Sacramento ,
+                          :San_Francisco ;
+            rdfs:label "California"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Canada
+:Canada rdf:type owl:NamedIndividual ,
+                 :Nation ;
+        :geo_contains :British_Columbia ,
+                      :Ontario ,
+                      :Quebec ;
+        rdfs:label "Canada"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/China
+:China rdf:type owl:NamedIndividual ,
+                :Nation ;
+       :geo_contains :Beijing ;
+       rdfs:label "China"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Dallas
+:Dallas rdf:type owl:NamedIndividual ,
+                 :City ;
+        rdfs:label "Dallas"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Europe
+:Europe rdf:type owl:NamedIndividual ,
+                 :Continent ;
+        :geo_contains :France ,
+                      :Russia ,
+                      :United_Kingdom ;
+        rdfs:label "Europe"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Florida
+:Florida rdf:type owl:NamedIndividual ,
+                  :State ;
+         :geo_contains :Miami ,
+                       :Tallahassee ;
+         rdfs:label "Florida"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/France
+:France rdf:type owl:NamedIndividual ,
+                 :Nation ;
+        :geo_contains :Paris ;
+        rdfs:label "France"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Harrisburg
+:Harrisburg rdf:type owl:NamedIndividual ,
+                     :City ;
+            rdfs:label "Harrisburg"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Houston
+:Houston rdf:type owl:NamedIndividual ,
+                  :City ;
+         rdfs:label "Houston"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/India
+:India rdf:type owl:NamedIndividual ,
+                :Nation ;
+       :geo_contains :Mumbai ;
+       rdfs:label "India"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Japan
+:Japan rdf:type owl:NamedIndividual ,
+                :Nation ;
+       :geo_contains :Tokyo ;
+       rdfs:label "Japan"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/London
+:London rdf:type owl:NamedIndividual ,
+                 :City ;
+        rdfs:label "London"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Los_Angeles
+:Los_Angeles rdf:type owl:NamedIndividual ,
+                      :City ;
+             rdfs:label "Los Angeles"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Melbourne
+:Melbourne rdf:type owl:NamedIndividual ,
+                    :City ;
+           rdfs:label "Melbourne"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Miami
+:Miami rdf:type owl:NamedIndividual ,
+                :City ;
+       rdfs:label "Miami"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Montreal
+:Montreal rdf:type owl:NamedIndividual ,
+                   :City ;
+          rdfs:label "Montreal"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Moscow
+:Moscow rdf:type owl:NamedIndividual ,
+                 :City ;
+        rdfs:label "Moscow"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Mumbai
+:Mumbai rdf:type owl:NamedIndividual ,
+                 :City ;
+        rdfs:label "Mumbai"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/New_York_City
+:New_York_City rdf:type owl:NamedIndividual ,
+                        :City ;
+               rdfs:label "New York City"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/New_York_State
+:New_York_State rdf:type owl:NamedIndividual ,
+                         :State ;
+                :geo_contains :Albany ,
+                              :New_York_City ;
+                rdfs:label "New York State"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/North_America
+:North_America rdf:type owl:NamedIndividual ,
+                        :Continent ;
+               :geo_contains :Canada ,
+                             :USA ;
+               rdfs:label "North America"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Ontario
+:Ontario rdf:type owl:NamedIndividual ,
+                  :Province ;
+         :geo_contains :Toronto ;
+         rdfs:label "Ontario"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Paris
+:Paris rdf:type owl:NamedIndividual ,
+                :City ;
+       rdfs:label "Paris"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Pennsylvania
+:Pennsylvania rdf:type owl:NamedIndividual ,
+                       :State ;
+              :geo_contains :Harrisburg ,
+                            :Philadelphia ,
+                            :Pittsburgh ;
+              rdfs:label "Pennsylvania"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Philadelphia
+:Philadelphia rdf:type owl:NamedIndividual ,
+                       :City ;
+              rdfs:label "Philadelphia"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Pittsburgh
+:Pittsburgh rdf:type owl:NamedIndividual ,
+                     :City ;
+            rdfs:label "Pittsburgh"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Quebec
+:Quebec rdf:type owl:NamedIndividual ,
+                 :Province ;
+        :geo_contains :Montreal ;
+        rdfs:label "Quebec"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Russia
+:Russia rdf:type owl:NamedIndividual ,
+                 :Nation ;
+        :geo_contains :Moscow ,
+                      :St_Petersburg ;
+        rdfs:label "Russia"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Sacramento
+:Sacramento rdf:type owl:NamedIndividual ,
+                     :City ;
+            rdfs:label "Sacramento"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/San_Francisco
+:San_Francisco rdf:type owl:NamedIndividual ,
+                        :City ;
+               rdfs:label "San Francisco"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/South_America
+:South_America rdf:type owl:NamedIndividual ,
+                        :Continent ;
+               rdfs:label "South America"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/St_Petersburg
+:St_Petersburg rdf:type owl:NamedIndividual ,
+                        :City ;
+               rdfs:label "St. Petersburg"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Tallahassee
+:Tallahassee rdf:type owl:NamedIndividual ,
+                      :City ;
+             rdfs:label "Tallahassee"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Texas
+:Texas rdf:type owl:NamedIndividual ,
+                :State ;
+       :geo_contains :Austin ,
+                     :Dallas ,
+                     :Houston ;
+       rdfs:label "Texas"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Tokyo
+:Tokyo rdf:type owl:NamedIndividual ,
+                :City ;
+       rdfs:label "Tokyo"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Toronto
+:Toronto rdf:type owl:NamedIndividual ,
+                  :City ;
+         rdfs:label "Toronto"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/USA
+:USA rdf:type owl:NamedIndividual ,
+              :Nation ;
+     :geo_contains :California ,
+                   :Florida ,
+                   :New_York_State ,
+                   :Pennsylvania ,
+                   :Texas ;
+     rdfs:label "United States of America"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/United_Kingdom
+:United_Kingdom rdf:type owl:NamedIndividual ,
+                         :Nation ;
+                :geo_contains :London ;
+                rdfs:label "United Kingdom"@en .
+
+
+###  https://www.michaeldebellis.com/bro_place/Vancouver
+:Vancouver rdf:type owl:NamedIndividual ,
+                    :City ;
+           rdfs:label "Vancouver"@en .
 
 
 #################################################################
