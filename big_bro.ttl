@@ -1318,7 +1318,7 @@ owl:Thing rdf:type owl:Class .
 <http://www.w3.org/ns/prov#SoftwareAgent> rdf:type owl:Class ;
                                           rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
                                           rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
-                                          rdfs:label "SoftwareAgent" ;
+                                          rdfs:label "Software Agent"@en ;
                                           <http://www.w3.org/ns/prov#category> "expanded" ;
                                           <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
                                           <http://www.w3.org/ns/prov#definition> "A software agent is running software."@en ;
