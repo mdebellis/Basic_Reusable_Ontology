@@ -57,16 +57,16 @@ so; `big_bro` is designed to **coexist** with alternative upper-level frameworks
 ---
 
 ## 3. `bro_pro`
-**The most complete BRO layer, adding a cleaned subset of PROV-O. Not Yet Released**
+**The most complete BRO layer, adding P-Plan**
 
-- The current version of this had some issues so I took it down and will republish it soon when I correct the issues
 - Includes all of **Basic Bro** and **Big Bro**.
-- Adds a compact, OWL DL–safe subset of **PROV-O**, including the essential
-  PROV entities (**Activity, Agent, Entity**) and core provenance properties.
-- Retains the **canonical PROV IRIs**.
+- Adds all of P-Plan which is a process model ontology designed to be compatible with PROV
+- Retains the **canonical PROV and P-Plan IRIs**.
 - Removes problematic or unnecessary elements (e.g., PROV annotation/object-property
   punning) to maintain OWL DL compatibility.
-- Provides a clean, production-ready provenance layer for operational knowledge graphs.
+- P-Plan documentation: https://www.opmw.org/model/p-plan/
+- P-Plan code: [https://www.opmw.org/model/p-plan/](https://www.opmw.org/p-plan.owl)
+- Provides a clean, production-ready provenance layer with process modeling.
 
 ---
 
