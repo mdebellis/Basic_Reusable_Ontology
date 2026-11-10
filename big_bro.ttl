@@ -6,6 +6,57 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://www.michaeldebellis.com/big_bro/> .
 
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mod: <https://w3id.org/mod#> .
+
+# Big Bro metadata revision: 2026-11-10.
+# The original entity definitions and logical axioms below are unchanged.
+<https://www.michaeldebellis.com/big_bro> rdf:type owl:Ontology ;
+    rdfs:label "Big Bro"@en ;
+    skos:prefLabel "Big Bro"@en ;
+    dcterms:title "Big Bro - Basic Reusable Ontology"@en ;
+    dcterms:alternative "Big_Bro"@en ;
+    dcterms:description "Big Bro is a reusable foundation ontology combining selected Dublin Core Terms and SKOS annotation properties, SULO upper-level classes and relations, and a selected subset of W3C PROV-O. It provides classes and properties for objects, spatial objects, information objects, processes, agents, organizations, locations, time, parthood, participation, and provenance. Reused vocabulary IRIs are retained, together with BRO's existing alignment axioms and annotations."@en ;
+    rdfs:comment "Big Bro is the middle layer of the Basic Reusable Ontology (BRO) family. This Turtle file contains the reused term definitions directly and has no owl:imports declarations."@en ;
+    dcterms:creator <https://orcid.org/0000-0002-8824-9577> ;
+    dcterms:modified "2026-11-10"^^xsd:date ;
+    dcterms:language <http://lexvo.org/id/iso639-1/en> ;
+    dcterms:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dcterms:rights "Big Bro is distributed under the Apache License, Version 2.0, as stated in the Basic_Reusable_Ontology repository LICENSE. The incorporated SULO source is published under CC0 1.0. Reused vocabulary content retains its applicable source terms and attribution; the complete prior header, including source notices and credits, is preserved in skos:historyNote."@en ;
+    dcterms:source <https://w3id.org/sulo/>,
+        <http://www.w3.org/ns/prov-o>,
+        <http://purl.org/dc/terms/>,
+        <http://www.w3.org/2004/02/skos/core> ;
+    vann:preferredNamespacePrefix "big_bro" ;
+    vann:preferredNamespaceUri <https://www.michaeldebellis.com/big_bro/> ;
+    foaf:homepage <https://github.com/mdebellis/Basic_Reusable_Ontology> ;
+    dcat:accessURL <https://raw.githubusercontent.com/mdebellis/Basic_Reusable_Ontology/main/big_bro.ttl> ;
+    rdfs:seeAlso <https://w3id.org/sulo/>,
+        <https://www.w3.org/TR/prov-o/>,
+        <https://github.com/mdebellis/Basic_Reusable_Ontology/blob/main/README.md> ;
+    owl:versionInfo "2026-11-10 metadata revision" ;
+    skos:editorialNote "Use dcterms:* for new Dublin Core metadata. The legacy dc:creator declaration is retained for compatibility with the existing vocabulary. Reused SULO, PROV, SKOS, and Dublin Core IRIs are preserved."@en ;
+    skos:note "SULO source attribution: Michel Dumontier, Remzi Çelebi, Komal Gilani, Isabelle de Zegher, Katerina Serafimova, Catalina Martínez Costa and Stefan Schulz. SULO - a simplified upper-level ontology. Proceedings of the Joint Ontology Workshops (JOWO) - Episode XI: The Sicilian Summer under the Etna, co-located with the 15th International Conference on Formal Ontology in Information Systems (FOIS 2025), September 8-9, 2025, Catania, Italy. Original author identifiers and funding attribution are preserved in skos:historyNote."@en ;
+    mod:definitionProperty rdfs:comment ;
+    mod:hasRepresentationLanguage <http://omv.ontoware.org/2005/05/ontology#OWL> ;
+    mod:hasSyntax <http://www.w3.org/ns/formats/Turtle> ;
+    mod:prefLabelProperty rdfs:label ;
+    mod:status "active" ;
+    skos:changeNote "2026-11-10: Corrected ontology-level metadata for Big Bro. Replaced the metadata-only Basic Bro description; corrected the creator, namespace metadata, homepage, and access URL; scoped the ontology license to Apache 2.0 in accordance with the BRO repository LICENSE; identified the CC0 notice as applying to the incorporated SULO source; removed inherited SULO release, compatibility, catalog, funding, and publication-date assertions from active Big Bro metadata; preserved the complete previous header in skos:historyNote. No entity IRIs, entity annotations, class axioms, property axioms, or instance assertions were changed."@en,
+        """2025-11-29 (M. DeBellis): Created PROV-Lite as a cleaned subset of the W3C PROV-O Turtle serialization for use with the Basic Reusable Ontology (Big Bro).
+– Removed duplicate owl:Ontology declarations.
+– Moved orphaned ontology metadata triples (label, seeAlso, versionIRI, versionInfo, specializationOf, wasRevisionOf) under this ontology IRI.
+– Removed stray non-comment prose that appeared after the :wasStartedBy axiom and caused Turtle parse errors.
+– Trimmed PROV terms and axioms not required by Big Bro, without changing the IRIs or logical meaning of the retained PROV terms."""@en,
+        """Imported SULO upper model: https://w3id.org/sulo/
+December 17, 2025
+Michael DeBellis""" ;
+    skos:historyNote """Historical ontology header, preserved verbatim from the source file before the metadata cleanup on 2026-11-10. This record combines earlier Big Bro, Basic Bro, SULO, and PROV-Lite metadata; the claims below are historical and are not the current metadata of Big Bro. Source at retrieval: https://raw.githubusercontent.com/mdebellis/Basic_Reusable_Ontology/main/big_bro.ttl
+
 <https://www.michaeldebellis.com/big_bro> rdf:type owl:Ontology ;
                                            <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-4727-9435> ;
                                            <http://purl.org/dc/terms/alternative> "SULO"@en ;
@@ -36,14 +87,14 @@
                                            owl:versionInfo "Recommendation version 2013-04-30, subsetted as PROV-Lite for Big Bro"@en ,
                                                            "0.2.14" ,
                                                            "1.0.0" ;
-                                           <http://www.w3.org/2004/02/skos/core#changeNote> """2025-11-29 (M. DeBellis): Created PROV-Lite as a cleaned subset of the W3C PROV-O Turtle serialization for use with the Basic Reusable Ontology (Big Bro).
+                                           <http://www.w3.org/2004/02/skos/core#changeNote> \"\"\"2025-11-29 (M. DeBellis): Created PROV-Lite as a cleaned subset of the W3C PROV-O Turtle serialization for use with the Basic Reusable Ontology (Big Bro).
 – Removed duplicate owl:Ontology declarations.
 – Moved orphaned ontology metadata triples (label, seeAlso, versionIRI, versionInfo, specializationOf, wasRevisionOf) under this ontology IRI.
 – Removed stray non-comment prose that appeared after the :wasStartedBy axiom and caused Turtle parse errors.
-– Trimmed PROV terms and axioms not required by Big Bro, without changing the IRIs or logical meaning of the retained PROV terms."""@en ,
-                                                                                            """Imported SULO upper model: https://w3id.org/sulo/
+– Trimmed PROV terms and axioms not required by Big Bro, without changing the IRIs or logical meaning of the retained PROV terms.\"\"\"@en ,
+                                                                                            \"\"\"Imported SULO upper model: https://w3id.org/sulo/
 December 17, 2025
-Michael DeBellis""" ;
+Michael DeBellis\"\"\" ;
                                            <http://www.w3.org/2004/02/skos/core#editorialNote> "Basic_Bro includes the legacy Dublin Core (dc:) namespace only because it is automatically imported by DCTERMS for backward compatibility. BRO users should always use dcterms:* properties and never use dc:* properties."@en ;
                                            <http://www.w3.org/2004/02/skos/core#note> "Basic_Bro reuses annotation and datatype properties from the SKOS and DCTERMS vocabularies. All classes and object properties from imported vocabularies have been removed to provide a clean metadata-only reusable layer."@en ;
                                            <http://www.w3.org/ns/dcat#accessURL> <https://w3id.org/sulo/sulo.ttl> ;
@@ -54,7 +105,7 @@ Michael DeBellis""" ;
                                            <https://w3id.org/mod#hasRepresentationLanguage> <http://omv.ontoware.org/2005/05/ontology#OWL> ;
                                            <https://w3id.org/mod#hasSyntax> <http://www.w3.org/ns/formats/Turtle> ;
                                            <https://w3id.org/mod#prefLabelProperty> rdfs:label ;
-                                           <https://w3id.org/mod#status> "active" .
+                                           <https://w3id.org/mod#status> "active" ."""@en .
 
 #################################################################
 #    Annotation properties
